@@ -1226,3 +1226,95 @@ a:hover {
   background: #D8D2C9;
   color: #39332F;
 }
+
+/* =====================================
+   SOFT BLACK & IVORY — NEW EDITORIAL LOOK
+===================================== */
+
+:root {
+  --ivory: #F8F7F4;
+  --cream: #EAE7E1;
+  --champagne: #D9D9D5;
+  --gold: #77736E;
+  --espresso: #171717;
+  --soft-brown: #55524E;
+  --border: #D9D7D2;
+  --white: #FFFFFF;
+}
+
+body {
+  background: #F8F7F4;
+  color: #171717;
+}
+
+/* Header */
+header,
+.site-header {
+  background: rgba(248,247,244,.97);
+  color: #171717;
+}
+
+/* Light sections */
+.intro,
+.about,
+.testimonials,
+.faq {
+  background: #F8F7F4;
+  color: #171717;
+}
+
+/* Dark editorial sections */
+.experience,
+.contact {
+  background: #171717;
+  color: #FFFFFF;
+}
+
+.experience h2,
+.experience h3,
+.experience p,
+.contact h2,
+.contact p,
+.contact a {
+  color: #FFFFFF;
+}
+
+/* Soft grey sections */
+.portfolio,
+.booking {
+  background: #EAE7E1;
+  color: #171717;
+}
+
+/* Buttons */
+button,
+.btn,
+.booking button {
+  background: #171717;
+  color: #FFFFFF;
+  border: 1px solid #171717;
+}
+
+button:hover,
+.btn:hover {
+  background: #55524E;
+  border-color: #55524E;
+}
+
+/* Cards */
+.portfolio-item,
+.experience-card,
+.testimonial-card {
+  border-color: #D9D7D2;
+}
+
+/* Typography */
+h1, h2, h3 {
+  color: inherit;
+}
+
+/* Selection */
+::selection {
+  background: #171717;
+  color: #FFFFFF;
+}
