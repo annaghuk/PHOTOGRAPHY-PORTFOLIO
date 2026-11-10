@@ -8,14 +8,14 @@
 /* 01. ROOT & RESET */
 
 :root {
-    --ivory: #f7f4ee;
-    --cream: #eee8dd;
-    --champagne: #d4c2a5;
-    --gold: #ad9270;
-    --espresso: #39332d;
-    --soft-brown: #776b60;
-    --white: #ffffff;
-    --border: #ddd5c9;
+    --ivory: #F8F7F4;
+    --cream: #EAE7E1;
+    --champagne: #D8D2C9;
+    --gold: #A69B90;
+    --espresso:#39332F;
+    --soft-brown: #776F68;
+    --white: #DEDAD3;
+    --border: #FFFFFF;
 
     --heading: 'Cormorant Garamond', serif;
     --body: 'DM Sans', sans-serif;
