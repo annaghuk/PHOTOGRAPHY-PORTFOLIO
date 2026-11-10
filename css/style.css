@@ -1154,3 +1154,75 @@ summary:focus-visible {
     transition: none;
   }
 }
+
+/* =====================================
+   NEW COLOR BALANCE — IVORY & TAUPE
+===================================== */
+
+body {
+  background: #F8F7F4;
+  color: #39332F;
+}
+
+header,
+.site-header {
+  background: rgba(248, 247, 244, 0.96);
+}
+
+.intro,
+.about,
+.testimonials,
+.faq {
+  background-color: #F8F7F4;
+}
+
+.portfolio,
+.experience,
+.booking,
+.contact {
+  background-color: #EAE7E1;
+}
+
+button,
+.btn,
+.booking button {
+  background-color: #39332F;
+  color: #FFFFFF;
+  border-color: #39332F;
+}
+
+button:hover,
+.btn:hover,
+.booking button:hover {
+  background-color: #776F68;
+  border-color: #776F68;
+}
+
+a {
+  color: #776F68;
+}
+
+a:hover {
+  color: #39332F;
+}
+
+.hero-cta {
+  color: #FFFFFF;
+}
+
+.hero-eyebrow,
+.hero-side-note,
+.hero-scroll {
+  color: #FFFFFF;
+}
+
+.portfolio-item,
+.experience-card,
+.testimonial-card {
+  border-color: #DEDAD3;
+}
+
+::selection {
+  background: #D8D2C9;
+  color: #39332F;
+}
