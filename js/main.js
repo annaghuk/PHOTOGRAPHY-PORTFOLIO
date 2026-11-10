@@ -127,3 +127,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
   console.log("Photography portfolio initialized.");
 });
+
+/* =====================================
+   HERO — REAL 3D MOUSE MOVEMENT
+===================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hero = document.querySelector("#hero3D");
+  const imageWrap = hero?.querySelector(".hero-image-wrap");
+
+  if (!hero || !imageWrap) return;
+
+  const canHover = window.matchMedia(
+    "(hover: hover) and (pointer: fine)"
+  );
+
+  if (!canHover.matches) return;
+
+  let animationFrame;
+
+  hero.addEventListener("pointermove", function (event) {
+    const rect = hero.getBoundingClientRect();
+
+    const x = (event.clientX - rect.left) / rect.width;
+    const y = (event.clientY - rect.top) / rect.height;
+
+    const rotateY = (x - 0.5) * 9;
+    const rotateX = (0.5 - y) * 7;
+
+    cancelAnimationFrame(animationFrame);
+
+    animationFrame = requestAnimationFrame(function () {
+      imageWrap.style.transform =
+        `scale(1.06) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+  });
+
+  hero.addEventListener("pointerleave", function () {
+    cancelAnimationFrame(animationFrame);
+
+    imageWrap.style.transform =
+      "scale(1) rotateX(0deg) rotateY(0deg)";
+  });
+});
