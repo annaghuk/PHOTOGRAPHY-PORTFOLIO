@@ -1318,3 +1318,71 @@ h1, h2, h3 {
   background: #171717;
   color: #FFFFFF;
 }
+
+/* =====================================
+   FINAL COLOR FIX — ACTUAL HTML SECTIONS
+===================================== */
+
+/* Light ivory sections */
+.intro-section,
+.about-section,
+.testimonials-section,
+.faq-section {
+  background: #F8F7F4;
+  color: #171717;
+}
+
+/* Soft grey sections */
+.portfolio-section,
+.slideshow-section,
+.booking-section,
+.behind-scenes-section {
+  background: #EAE7E1;
+  color: #171717;
+}
+
+/* Dark editorial sections */
+.experience-section,
+.contact-section {
+  background: #171717;
+  color: #FFFFFF;
+}
+
+/* Text inside dark sections */
+.experience-section h2,
+.experience-section h3,
+.experience-section p,
+.contact-section h2,
+.contact-section p,
+.contact-section a {
+  color: #FFFFFF;
+}
+
+/* Experience cards */
+.experience-card {
+  border-color: #55524E;
+}
+
+.experience-card p {
+  color: #D9D9D5;
+}
+
+.experience-card i {
+  color: #D9D9D5;
+}
+
+/* Contact icons */
+.contact-section .social-links a {
+  border-color: #77736E;
+  color: #FFFFFF;
+}
+
+.contact-section .social-links a:hover {
+  background: #FFFFFF;
+  color: #171717;
+}
+
+/* Dark section accent headings */
+.experience-section h2 em {
+  color: #D9D9D5;
+}
