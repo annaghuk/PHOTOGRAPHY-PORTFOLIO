@@ -1,4 +1,976 @@
-/* =================================
+
+/* =====================================================
    PHOTOGRAPHY PORTFOLIO
-   Main Stylesheet
-   ================================= */
+   Luxury Editorial Design
+   Ivory & Champagne / Soft Espresso
+   ===================================================== */
+
+/* 01. ROOT & RESET */
+
+:root {
+    --ivory: #f7f4ee;
+    --cream: #eee8dd;
+    --champagne: #d4c2a5;
+    --gold: #ad9270;
+    --espresso: #39332d;
+    --soft-brown: #776b60;
+    --white: #ffffff;
+    --border: #ddd5c9;
+
+    --heading: 'Cormorant Garamond', serif;
+    --body: 'DM Sans', sans-serif;
+
+    --transition: all .4s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--ivory);
+    color: var(--espresso);
+    font-family: var(--body);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+::selection {
+    background: var(--champagne);
+    color: var(--espresso);
+}
+
+/* 02. TYPOGRAPHY */
+
+h1, h2, h3, h4 {
+    font-family: var(--heading);
+    font-weight: 400;
+    line-height: 1.08;
+}
+
+h1 {
+    font-size: clamp(55px, 8vw, 112px);
+}
+
+h2 {
+    font-size: clamp(42px, 5.5vw, 76px);
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h1 em,
+h2 em {
+    color: var(--gold);
+    font-weight: 400;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+/* 03. PRELOADER */
+
+.preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--ivory);
+    color: var(--gold);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 11px;
+    animation: loaderOut 1s ease 1s forwards;
+}
+
+@keyframes loaderOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+/* 04. HEADER */
+
+.site-header {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    min-height: 95px;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(247, 244, 238, .96);
+    border-bottom: 1px solid rgba(173, 146, 112, .2);
+}
+
+.logo {
+    font-family: var(--heading);
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+
+.logo span {
+    display: block;
+    margin-top: 7px;
+    font-family: var(--body);
+    font-size: 8px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-align: center;
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.main-navigation a {
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.main-navigation a:hover {
+    color: var(--gold);
+}
+
+.main-navigation .nav-booking {
+    padding: 12px 21px;
+    border: 1px solid var(--gold);
+    transition: var(--transition);
+}
+
+.main-navigation .nav-booking:hover {
+    background: var(--espresso);
+    color: var(--white);
+    border-color: var(--espresso);
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: none;
+    color: var(--espresso);
+    font-size: 21px;
+}
+
+/* 05. HERO */
+
+.hero-section {
+    min-height: 720px;
+    padding: 90px 9% 65px;
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    align-items: center;
+    gap: 65px;
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 550px;
+}
+
+.hero-content h1 {
+    margin-bottom: 27px;
+}
+
+.hero-content p {
+    max-width: 390px;
+    color: var(--soft-brown);
+    margin-bottom: 35px;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.primary-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 17px 27px;
+    background: var(--espresso);
+    color: var(--white);
+    border: 1px solid var(--espresso);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.primary-button:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    min-height: 570px;
+    position: relative;
+}
+
+.hero-image::after {
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: 85%;
+    border: 1px solid var(--champagne);
+    top: 7%;
+    right: -20px;
+    z-index: -1;
+}
+
+.hero-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 9%;
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+/* 06. IMAGE PLACEHOLDERS */
+
+.image-placeholder {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(145deg, #e8dfd1, #d9cabb);
+    color: #8e7c68;
+    text-align: center;
+}
+
+.image-placeholder span {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+.image-placeholder::before {
+    content: '';
+    position: absolute;
+    inset: 15px;
+    border: 1px solid rgba(255,255,255,.4);
+    pointer-events: none;
+}
+
+/* 07. INTRODUCTION */
+
+.intro-section {
+    padding: 125px 15%;
+    text-align: center;
+    background: var(--cream);
+}
+
+.intro-section h2 {
+    max-width: 850px;
+    margin: 0 auto 30px;
+}
+
+.intro-section p {
+    max-width: 570px;
+    margin: auto;
+    color: var(--soft-brown);
+    font-size: 13px;
+}
+
+/* 08. PORTFOLIO */
+
+.portfolio-section {
+    padding: 120px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.section-heading h2 {
+    margin-bottom: 20px;
+}
+
+.section-heading p {
+    color: var(--soft-brown);
+    font-size: 12px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 65px 35px;
+}
+
+.portfolio-item:nth-child(even) {
+    margin-top: 90px;
+}
+
+.portfolio-item .image-placeholder {
+    height: 510px;
+    transition: var(--transition);
+}
+
+.portfolio-item:hover .image-placeholder {
+    transform: translateY(-8px);
+}
+
+.portfolio-item h3 {
+    margin-top: 22px;
+}
+
+.portfolio-item > span {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* 09. SLIDESHOW */
+
+.slideshow-section {
+    padding: 110px 8%;
+    background: var(--cream);
+    text-align: center;
+}
+
+.slideshow-section h2 {
+    margin-bottom: 45px;
+}
+
+.slideshow {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.slide {
+    height: 550px;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-top: 25px;
+}
+
+.slider-controls button {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--espresso);
+    transition: var(--transition);
+}
+
+.slider-controls button:hover {
+    background: var(--espresso);
+    color: var(--white);
+}
+
+.slide-counter {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--gold);
+}
+
+/* 10. EXPERIENCE */
+
+.experience-section {
+    padding: 120px 9%;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.experience-card {
+    padding: 50px 30px;
+    text-align: center;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.experience-card:hover {
+    background: var(--cream);
+    transform: translateY(-8px);
+    border-color: var(--champagne);
+}
+
+.experience-card i {
+    font-size: 26px;
+    color: var(--gold);
+    margin-bottom: 25px;
+}
+
+.experience-card h3 {
+    margin-bottom: 18px;
+}
+
+.experience-card p {
+    font-size: 12px;
+    color: var(--soft-brown);
+}
+
+/* 11. BEHIND THE SCENES */
+
+.behind-scenes-section {
+    padding: 120px 10%;
+    text-align: center;
+    background: var(--cream);
+}
+
+.behind-scenes-section h2 {
+    margin-bottom: 45px;
+}
+
+.video-placeholder {
+    min-height: 490px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    background: linear-gradient(135deg, #cfc0ae, #e5d8c7);
+    color: var(--espresso);
+}
+
+.video-placeholder i {
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--espresso);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.video-placeholder:hover i {
+    background: var(--espresso);
+    color: var(--white);
+}
+
+.video-placeholder span {
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+.behind-scenes-section > p {
+    max-width: 500px;
+    margin: 30px auto 0;
+    color: var(--soft-brown);
+}
+
+/* 12. ABOUT */
+
+.about-section {
+    padding: 125px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: center;
+}
+
+.about-image {
+    min-height: 570px;
+}
+
+.about-content h2 {
+    margin-bottom: 30px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    color: var(--soft-brown);
+    font-size: 13px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* 13. TESTIMONIALS */
+
+.testimonials-section {
+    padding: 120px 12%;
+    text-align: center;
+    background: var(--cream);
+}
+
+.testimonials-section h2 {
+    margin-bottom: 55px;
+}
+
+.testimonial {
+    max-width: 720px;
+    margin: auto;
+}
+
+.testimonial i {
+    color: var(--gold);
+    font-size: 27px;
+    margin-bottom: 25px;
+}
+
+.testimonial p {
+    font-family: var(--heading);
+    font-size: clamp(25px, 3.5vw, 39px);
+    line-height: 1.5;
+}
+
+.testimonial span {
+    display: inline-block;
+    margin-top: 30px;
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+/* 14. FAQ */
+
+.faq-section {
+    padding: 120px 12%;
+}
+
+.faq-section h2 {
+    margin-bottom: 50px;
+}
+
+.faq-list details {
+    padding: 24px 5px;
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-list summary {
+    position: relative;
+    padding-right: 30px;
+    list-style: none;
+    cursor: pointer;
+    font-family: var(--heading);
+    font-size: 25px;
+}
+
+.faq-list summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-list summary::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: var(--gold);
+    font-family: var(--body);
+    font-size: 20px;
+}
+
+.faq-list details[open] summary::after {
+    content: '−';
+}
+
+.faq-list details p {
+    max-width: 650px;
+    margin-top: 20px;
+    color: var(--soft-brown);
+    font-size: 12px;
+}
+
+/* 15. BOOKING */
+
+.booking-section {
+    padding: 120px 10%;
+    background: var(--cream);
+    text-align: center;
+}
+
+.booking-section > h2 {
+    margin-bottom: 20px;
+}
+
+.booking-section > p {
+    max-width: 550px;
+    margin: 0 auto 45px;
+    color: var(--soft-brown);
+}
+
+.booking-form {
+    max-width: 650px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: left;
+}
+
+.booking-form label {
+    margin: 20px 0 8px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 16px;
+    background: var(--ivory);
+    border: 1px solid var(--border);
+    color: var(--espresso);
+    outline: none;
+    border-radius: 0;
+    transition: var(--transition);
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    border-color: var(--gold);
+}
+
+.booking-form textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.booking-form .primary-button {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.booking-form small {
+    margin-top: 15px;
+    color: var(--soft-brown);
+    font-size: 10px;
+    text-align: center;
+}
+
+/* 16. CONTACT */
+
+.contact-section {
+    padding: 120px 10%;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    color: var(--soft-brown);
+    margin-bottom: 35px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    color: var(--gold);
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background: var(--espresso);
+    color: var(--white);
+    transform: translateY(-4px);
+}
+
+/* 17. FOOTER */
+
+.site-footer {
+    padding: 55px 8%;
+    background: var(--espresso);
+    color: var(--ivory);
+    text-align: center;
+}
+
+.site-footer .logo {
+    display: inline-block;
+}
+
+.site-footer p {
+    max-width: 400px;
+    margin: 20px auto;
+    color: #c7bbaa;
+    font-family: var(--heading);
+    font-size: 23px;
+}
+
+.site-footer > span {
+    display: block;
+    margin-top: 30px;
+    color: #c7bbaa;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--champagne);
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* 18. RESPONSIVE DESIGN - TABLETS */
+
+@media (max-width: 1000px) {
+
+    .site-header {
+        padding: 20px 5%;
+    }
+
+    .main-navigation {
+        gap: 18px;
+    }
+
+    .hero-section {
+        padding: 75px 6%;
+        gap: 35px;
+    }
+
+    .hero-image {
+        min-height: 460px;
+    }
+
+    .portfolio-item .image-placeholder {
+        height: 420px;
+    }
+
+    .about-section {
+        gap: 45px;
+    }
+}
+
+/* 19. RESPONSIVE DESIGN - MOBILE */
+
+@media (max-width: 750px) {
+
+    h1 {
+        font-size: clamp(48px, 13vw, 75px);
+    }
+
+    h2 {
+        font-size: clamp(39px, 10vw, 58px);
+    }
+
+    .site-header {
+        min-height: 78px;
+        padding: 15px 6%;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 30px 7%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+        background: var(--ivory);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .main-navigation.active {
+        display: flex;
+    }
+
+    .hero-section {
+        grid-template-columns: 1fr;
+        padding: 75px 7% 65px;
+        gap: 45px;
+    }
+
+    .hero-image {
+        min-height: 440px;
+    }
+
+    .hero-caption {
+        left: 7%;
+    }
+
+    .intro-section,
+    .portfolio-section,
+    .experience-section,
+    .behind-scenes-section,
+    .about-section,
+    .testimonials-section,
+    .faq-section,
+    .booking-section,
+    .contact-section {
+        padding: 80px 7%;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .portfolio-item:nth-child(even) {
+        margin-top: 0;
+    }
+
+    .portfolio-item .image-placeholder {
+        height: 450px;
+    }
+
+    .slide {
+        height: 350px;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .experience-card {
+        padding: 35px 25px;
+    }
+
+    .video-placeholder {
+        min-height: 300px;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .about-image {
+        min-height: 420px;
+    }
+
+    .faq-list summary {
+        font-size: 22px;
+    }
+
+    .site-footer {
+        padding: 45px 7%;
+    }
+}
+
+/* 20. SMALL MOBILE SCREENS */
+
+@media (max-width: 400px) {
+
+    .hero-image {
+        min-height: 350px;
+    }
+
+    .portfolio-item .image-placeholder {
+        height: 350px;
+    }
+
+    .slide {
+        height: 260px;
+    }
+
+    .about-image {
+        min-height: 340px;
+    }
+
+    .primary-button {
+        padding: 15px 18px;
+        font-size: 9px;
+    }
+}
+
+/* 21. ACCESSIBILITY */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
