@@ -974,3 +974,183 @@ summary:focus-visible {
         transition-duration: .01ms !important;
     }
 }
+
+/* =====================================
+   HERO — LUXURY 3D PHOTO EXPERIENCE
+===================================== */
+
+.hero {
+  width: 100%;
+  padding: 18px;
+  background: #f7f4ee;
+}
+
+.hero-visual {
+  position: relative;
+  width: 100%;
+  height: min(82vh, 850px);
+  min-height: 600px;
+  overflow: hidden;
+  border-radius: 3px;
+  perspective: 1400px;
+  isolation: isolate;
+  background: #d8cbb9;
+  transform-style: preserve-3d;
+}
+
+.hero-image-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center 35%;
+  transform: scale(1.08);
+  transition: transform 1.2s cubic-bezier(.2,.7,.2,1);
+  will-change: transform;
+}
+
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(35, 29, 24, .48) 0%,
+    rgba(35, 29, 24, .16) 48%,
+    rgba(35, 29, 24, 0) 100%
+  );
+}
+
+.hero-content {
+  position: absolute;
+  z-index: 2;
+  left: 9%;
+  top: 50%;
+  transform: translateY(-50%) translateZ(65px);
+  max-width: 680px;
+  color: #fffaf2;
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 4px;
+  margin-bottom: 28px;
+}
+
+.hero-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(58px, 8vw, 112px);
+  font-weight: 400;
+  line-height: .91;
+  letter-spacing: -3px;
+  margin: 0;
+}
+
+.hero-content h1 em {
+  font-weight: 400;
+}
+
+.hero-content p {
+  margin: 28px 0 32px;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+}
+
+.hero-cta {
+  display: inline-flex;
+  gap: 24px;
+  align-items: center;
+  color: #fffaf2;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,.7);
+  padding-bottom: 10px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  pointer-events: auto;
+  transition: gap .3s ease;
+}
+
+.hero-cta:hover {
+  gap: 34px;
+}
+
+.hero-side-note {
+  position: absolute;
+  z-index: 2;
+  right: 30px;
+  top: 50%;
+  writing-mode: vertical-rl;
+  color: #fffaf2;
+  font-size: 9px;
+  letter-spacing: 3px;
+  transform: translateY(-50%) translateZ(35px);
+}
+
+.hero-scroll {
+  position: absolute;
+  z-index: 2;
+  bottom: 30px;
+  left: 9%;
+  color: #fffaf2;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+/* Smooth 3D interaction */
+@media (hover: hover) and (pointer: fine) {
+  .hero-visual {
+    transition: box-shadow .5s ease;
+  }
+
+  .hero-visual:hover .hero-image {
+    transform: scale(1.13);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    padding: 8px;
+  }
+
+  .hero-visual {
+    height: 76vh;
+    min-height: 540px;
+  }
+
+  .hero-content {
+    left: 7%;
+    right: 6%;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(52px, 12vw, 76px);
+    letter-spacing: -2px;
+  }
+
+  .hero-side-note {
+    right: 14px;
+    font-size: 8px;
+  }
+
+  .hero-scroll {
+    left: 7%;
+    bottom: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image {
+    transition: none;
+  }
+}
