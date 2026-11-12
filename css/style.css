@@ -466,53 +466,129 @@ h2 em {
     color: var(--soft-brown);
 }
 
+
 /* 11. BEHIND THE SCENES */
 
 .behind-scenes-section {
-    padding: 120px 10%;
-    text-align: center;
+    padding: 110px 10%;
     background: var(--cream);
-}
-
-.behind-scenes-section h2 {
-    margin-bottom: 45px;
-}
-
-.video-placeholder {
-    min-height: 490px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 22px;
-    background: linear-gradient(135deg, #cfc0ae, #e5d8c7);
-    color: var(--espresso);
-}
-
-.video-placeholder i {
-    width: 70px;
-    height: 70px;
     display: grid;
-    place-items: center;
-    border: 1px solid var(--espresso);
-    border-radius: 50%;
-    transition: var(--transition);
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 70px;
+    overflow: hidden;
 }
 
-.video-placeholder:hover i {
-    background: var(--espresso);
-    color: var(--white);
+.behind-scenes-content {
+    text-align: left;
 }
 
-.video-placeholder span {
-    font-size: 10px;
-    letter-spacing: 3px;
+.behind-scenes-content h2 {
+    font-size: clamp(34px, 4vw, 58px);
+    line-height: 1.15;
+    margin: 25px 0;
 }
 
-.behind-scenes-section > p {
-    max-width: 500px;
-    margin: 30px auto 0;
+.behind-scenes-content h2 em {
+    display: block;
+    font-family: Georgia, serif;
+    font-weight: 400;
+}
+
+.behind-scenes-content p {
+    max-width: 360px;
+    line-height: 1.9;
     color: var(--soft-brown);
+    font-size: 14px;
+}
+
+.film-caption {
+    display: block;
+    margin-top: 35px;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--soft-brown);
+}
+
+.behind-scenes-video {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: 560px;
+    margin-left: auto;
+    overflow: hidden;
+    background: #292722;
+    border: 1px solid rgba(164, 138, 107, 0.35);
+    box-shadow: 0 25px 60px rgba(41, 39, 34, 0.12);
+}
+
+.behind-scenes-video video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 9px;
+    letter-spacing: 2px;
+    pointer-events: none;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+}
+
+/* MOBILE RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+
+    .behind-scenes-section {
+        padding: 65px 7%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .behind-scenes-content {
+        text-align: center;
+    }
+
+    .behind-scenes-content h2 {
+        font-size: 34px;
+        margin: 20px 0;
+    }
+
+    .behind-scenes-content p {
+        margin: 0 auto;
+        font-size: 13px;
+    }
+
+    .film-caption {
+        margin-top: 22px;
+    }
+
+    .behind-scenes-video {
+        width: 100%;
+        max-width: 300px;
+        height: 390px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    .behind-scenes-video {
+        max-width: 260px;
+        height: 340px;
+    }
+
+    .behind-scenes-content h2 {
+        font-size: 29px;
+    }
 }
 
 /* 12. ABOUT */
