@@ -1386,3 +1386,32 @@ h1, h2, h3 {
 .experience-section h2 em {
   color: #D9D9D5;
 }
+
+/* SANDALJYAN — SIGNATURE BRAND */
+
+.brand-name,
+.logo-text,
+.site-logo {
+  font-family: 'Pinyon Script', cursive !important;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+  color: #171717;
+  text-transform: none;
+}
+
+.brand-name a,
+.logo-text a,
+.site-logo a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .brand-name,
+  .logo-text,
+  .site-logo {
+    font-size: 38px;
+  }
+}
