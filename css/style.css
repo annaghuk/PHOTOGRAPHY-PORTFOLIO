@@ -1606,3 +1606,30 @@ h1, h2, h3 {
         padding: 15px 25px;
     }
 }
+
+/* FINAL SANDALJYAN BRAND SIZE FIX */
+
+.site-header .logo .brand-signature {
+    font-family: 'Pinyon Script', cursive !important;
+    font-size: 76px !important;
+    font-weight: 400 !important;
+    line-height: 0.9 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+    color: #171717 !important;
+    display: block !important;
+}
+
+.site-header .logo .brand-subtitle {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: 9px !important;
+    letter-spacing: 3px !important;
+    margin-top: 9px !important;
+    text-transform: uppercase !important;
+}
+
+@media (max-width: 768px) {
+    .site-header .logo .brand-signature {
+        font-size: 58px !important;
+    }
+}
