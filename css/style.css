@@ -2934,3 +2934,91 @@ h2 em {
         font-size: 19px !important;
     }
 }
+
+/* =========================================
+   MOBILE HERO — IMAGE & TEXT REFINEMENT
+========================================= */
+
+@media (max-width: 768px) {
+
+    .hero,
+    .hero-visual {
+        min-height: 720px !important;
+        height: 100svh !important;
+        overflow: hidden !important;
+    }
+
+    .hero-image-wrap {
+        position: absolute !important;
+        inset: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .hero-image {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: 35% center !important;
+    }
+
+    .hero-content {
+        width: 48% !important;
+        right: 5% !important;
+        left: auto !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        text-align: right !important;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(27px, 7vw, 38px) !important;
+        line-height: 1.12 !important;
+    }
+
+    .hero-content .hero-tagline {
+        font-size: clamp(17px, 4.5vw, 21px) !important;
+    }
+
+    .hero-content .hero-description {
+        font-size: 10px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .hero-side-note {
+        display: none !important;
+    }
+
+    .hero-scroll {
+        bottom: 22px !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero,
+    .hero-visual {
+        min-height: 680px !important;
+    }
+
+    .hero-image {
+        object-position: 32% center !important;
+    }
+
+    .hero-content {
+        width: 50% !important;
+        right: 4% !important;
+    }
+
+    .hero-content h1 {
+        font-size: 27px !important;
+    }
+
+    .hero-content .hero-tagline {
+        font-size: 17px !important;
+    }
+
+    .hero-content .hero-eyebrow {
+        font-size: 8px !important;
+        letter-spacing: 1.5px !important;
+    }
+}
