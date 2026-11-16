@@ -3140,3 +3140,39 @@ h2 em {
         font-size: 42px !important;
     }
 }
+
+/* ELEGANT ONE-LINE SIGNATURE */
+
+.hero-content {
+    top: auto !important;
+    bottom: 9% !important;
+    right: 7% !important;
+    left: auto !important;
+    transform: none !important;
+    width: auto !important;
+    max-width: none !important;
+}
+
+.hero-content .hero-tagline {
+    font-family: 'Italianno', cursive !important;
+    font-size: 43px !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    letter-spacing: 0.3px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    color: #ffffff !important;
+    text-align: right !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        right: 5% !important;
+        bottom: 8% !important;
+    }
+
+    .hero-content .hero-tagline {
+        font-size: 34px !important;
+    }
+}
