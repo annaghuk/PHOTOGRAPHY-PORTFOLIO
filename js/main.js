@@ -170,3 +170,42 @@ document.addEventListener("DOMContentLoaded", function () {
       "scale(1) rotateX(0deg) rotateY(0deg)";
   });
 });
+
+/* =====================================
+   GALLERY FILTERS
+===================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const filterButtons = document.querySelectorAll(".gallery-filter");
+    const galleryCards = document.querySelectorAll(".gallery-card");
+
+    if (!filterButtons.length || !galleryCards.length) return;
+
+    filterButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const selectedFilter = button.dataset.filter;
+
+            filterButtons.forEach(item => {
+                item.classList.toggle("active", item === button);
+            });
+
+            galleryCards.forEach(card => {
+
+                const category = card.dataset.category;
+
+                if (selectedFilter === "all" || category === selectedFilter) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+
+            });
+
+        });
+
+    });
+
+});
