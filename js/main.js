@@ -41,40 +41,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // PORTFOLIO SLIDESHOW
-  const slideshow = document.querySelector(
-    ".slideshow, .slideshow-section, [data-slideshow]"
-  );
+  
+  // EDITORIAL SLIDESHOW
+  const slideshowSection = document.querySelector(".slideshow-section");
 
-  if (slideshow) {
-    const slides = slideshow.querySelectorAll(
-      ".slide, .slideshow-slide, [data-slide]"
-    );
-
-    const nextButton = slideshow.querySelector(
-      ".next-slide, .slide-next, [data-next]"
-    );
-
-    const prevButton = slideshow.querySelector(
-      ".prev-slide, .slide-prev, [data-prev]"
-    );
-
-    const counter = slideshow.querySelector(
-      ".slide-counter, .slideshow-counter, [data-counter]"
-    );
+  if (slideshowSection) {
+    const slides = slideshowSection.querySelectorAll(".slide");
+    const nextButton = slideshowSection.querySelector(".next-slide");
+    const prevButton = slideshowSection.querySelector(".prev-slide");
+    const counter = slideshowSection.querySelector(".slide-counter");
 
     if (slides.length > 0) {
       let currentSlide = 0;
+      let slideshowTimer;
+      const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
 
       function showSlide(index) {
         currentSlide = (index + slides.length) % slides.length;
 
         slides.forEach((slide, i) => {
-          slide.classList.toggle("active", i === currentSlide);
-          slide.setAttribute(
-            "aria-hidden",
-            String(i !== currentSlide)
-          );
+          const isActive = i === currentSlide;
+
+          slide.classList.toggle("active", isActive);
+          slide.setAttribute("aria-hidden", String(!isActive));
         });
 
         if (counter) {
@@ -83,17 +74,56 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
+      function stopAutoplay() {
+        clearInterval(slideshowTimer);
+      }
+
+      function startAutoplay() {
+        stopAutoplay();
+
+        if (reducedMotion || document.hidden) return;
+
+        slideshowTimer = setInterval(() => {
+          showSlide(currentSlide + 1);
+        }, 5000);
+      }
+
       nextButton?.addEventListener("click", () => {
         showSlide(currentSlide + 1);
+        startAutoplay();
       });
 
       prevButton?.addEventListener("click", () => {
         showSlide(currentSlide - 1);
+        startAutoplay();
+      });
+
+      // PAUSE WHEN VISITOR HOVERS
+      slideshowSection.addEventListener("mouseenter", stopAutoplay);
+      slideshowSection.addEventListener("mouseleave", startAutoplay);
+
+      // PAUSE WHEN VISITOR FOCUSES ON CONTROLS
+      slideshowSection.addEventListener("focusin", stopAutoplay);
+      slideshowSection.addEventListener("focusout", event => {
+        if (!slideshowSection.contains(event.relatedTarget)) {
+          startAutoplay();
+        }
+      });
+
+      // PAUSE WHEN TAB IS NOT VISIBLE
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          stopAutoplay();
+        } else {
+          startAutoplay();
+        }
       });
 
       showSlide(0);
+      startAutoplay();
     }
   }
+
 
   // REVEAL ANIMATIONS
   const revealItems = document.querySelectorAll(
