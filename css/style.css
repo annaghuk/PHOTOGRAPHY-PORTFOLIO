@@ -3517,3 +3517,8 @@ h2 em {
         transition: none;
     }
 }
+/* SLIDESHOW — BLACK & WHITE EDITORIAL */
+
+.slideshow-section .slide img {
+    filter: grayscale(100%);
+}
