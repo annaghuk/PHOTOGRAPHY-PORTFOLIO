@@ -2819,3 +2819,32 @@ h2 em {
         letter-spacing: 2px !important;
     }
 }
+/* =====================================
+   LUXURY HERO — SLOW CINEMATIC MOTION
+===================================== */
+
+.hero-image-wrap {
+    overflow: hidden !important;
+}
+
+.hero-image {
+    animation: luxuryHeroMotion 24s ease-in-out infinite alternate !important;
+    transform-origin: center center;
+    will-change: transform;
+}
+
+@keyframes luxuryHeroMotion {
+    0% {
+        transform: scale(1.04) translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: scale(1.15) translate3d(-1%, -1%, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-image {
+        animation: none !important;
+    }
+}
