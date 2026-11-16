@@ -3176,3 +3176,41 @@ h2 em {
         font-size: 34px !important;
     }
 }
+
+/* =========================================
+   ABOUT — PHOTOGRAPHER PORTRAIT
+========================================= */
+
+.about-image {
+    overflow: hidden !important;
+    position: relative !important;
+    background: #eee !important;
+}
+
+.about-image .about-portrait {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 520px !important;
+    object-fit: cover !important;
+    object-position: center 30% !important;
+    filter: grayscale(100%);
+    transition: filter 0.8s ease, transform 1s ease;
+}
+
+.about-image:hover .about-portrait {
+    filter: grayscale(0%);
+    transform: scale(1.025);
+}
+
+.about-content .about-signature {
+    font-family: 'Italianno', cursive !important;
+    font-size: 34px !important;
+    margin-top: 25px !important;
+}
+
+@media (max-width: 768px) {
+    .about-image .about-portrait {
+        min-height: 420px !important;
+    }
+}
