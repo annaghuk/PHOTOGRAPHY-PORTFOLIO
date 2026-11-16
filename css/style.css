@@ -2757,3 +2757,60 @@ h2 em {
         white-space: nowrap;
     }
 }
+
+/* =====================================
+   SANDALJYAN STUDIO — SIGNATURE LOGO
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Cormorant+Garamond:wght@400;500&display=swap');
+
+.site-header .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.site-header .brand-signature {
+    font-family: 'Italianno', cursive;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 0.85;
+    color: #fff;
+}
+
+.site-header .brand-studio {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 7px;
+    margin-top: 7px;
+    margin-left: 4px;
+    color: #fff;
+}
+
+.site-header .brand-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    margin-top: 7px;
+    margin-left: 4px;
+    color: rgba(255,255,255,0.7);
+}
+
+@media (max-width: 600px) {
+    .site-header .brand-signature {
+        font-size: 40px;
+    }
+
+    .site-header .brand-studio {
+        font-size: 10px;
+    }
+
+    .site-header .brand-subtitle {
+        font-size: 7px;
+    }
+}
