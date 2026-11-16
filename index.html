@@ -105,51 +105,171 @@
             </p>
         </section>
 
-        <!-- PORTFOLIO -->
-        <section class="portfolio-section" id="portfolio">
+       
+<!-- PORTFOLIO / PHOTO GALLERY -->
+<section class="portfolio-section gallery-section" id="portfolio">
 
-            <div class="section-heading">
-                <span class="eyebrow">SELECTED WORKS</span>
-                <h2>A world of <em>beautiful moments</em></h2>
-                <p>A collection of stories, personalities and emotions.</p>
-            </div>
+    <div class="section-heading gallery-heading">
+        <span class="eyebrow">A CURATED COLLECTION</span>
+        <h2>Stories through <em>the lens.</em></h2>
+        <p>Portraits, connections and moments worth remembering.</p>
+    </div>
 
-            <div class="portfolio-grid">
+    <div class="gallery-filters">
+        <button class="gallery-filter active" data-filter="all" type="button">All Works</button>
+        <button class="gallery-filter" data-filter="portraits" type="button">Portraits</button>
+        <button class="gallery-filter" data-filter="fashion" type="button">Fashion</button>
+        <button class="gallery-filter" data-filter="editorial" type="button">Editorial</button>
+        <button class="gallery-filter" data-filter="family" type="button">Family</button>
+        <button class="gallery-filter" data-filter="details" type="button">Details</button>
+    </div>
 
-                <a href="#booking" class="portfolio-item">
-                    <div class="image-placeholder">
-                        <span>PORTRAIT PHOTOGRAPHY</span>
-                    </div>
-                    <h3>Portraits</h3>
-                    <span>Discover the collection ↗</span>
-                </a>
+    <div class="gallery-grid">
 
-                <a href="#booking" class="portfolio-item">
-                    <div class="image-placeholder">
-                        <span>INDIVIDUAL PHOTOGRAPHY</span>
-                    </div>
-                    <h3>Individual Stories</h3>
-                    <span>Discover the collection ↗</span>
-                </a>
+        <!-- PORTRAITS -->
+        <a href="images/portraits/IMG_1938.jpg" class="gallery-card" data-category="portraits">
+            <img src="images/portraits/IMG_1938.jpg" alt="Portrait photography" loading="lazy">
+            <span class="gallery-card-caption">Portraits <small>01</small></span>
+        </a>
 
-                <a href="#booking" class="portfolio-item">
-                    <div class="image-placeholder">
-                        <span>FAMILY PHOTOGRAPHY</span>
-                    </div>
-                    <h3>Family Moments</h3>
-                    <span>Discover the collection ↗</span>
-                </a>
+        <a href="images/portraits/IMG_1943.jpeg" class="gallery-card" data-category="portraits">
+            <img src="images/portraits/IMG_1943.jpeg" alt="Natural portrait" loading="lazy">
+            <span class="gallery-card-caption">Natural Beauty <small>02</small></span>
+        </a>
 
-                <a href="#booking" class="portfolio-item">
-                    <div class="image-placeholder">
-                        <span>EDITORIAL PHOTOGRAPHY</span>
-                    </div>
-                    <h3>Editorial</h3>
-                    <span>Discover the collection ↗</span>
-                </a>
+        <a href="images/portraits/IMG_1946.jpeg" class="gallery-card" data-category="portraits">
+            <img src="images/portraits/IMG_1946.jpeg" alt="Individual portrait" loading="lazy">
+            <span class="gallery-card-caption">Individual Stories <small>03</small></span>
+        </a>
 
-            </div>
-        </section>
+        <a href="images/portraits/IMG_1948.jpg" class="gallery-card" data-category="portraits">
+            <img src="images/portraits/IMG_1948.jpg" alt="Artistic portrait" loading="lazy">
+            <span class="gallery-card-caption">The Art of You <small>04</small></span>
+        </a>
+
+        <a href="images/portraits/IMG_1954.jpg" class="gallery-card" data-category="portraits">
+            <img src="images/portraits/IMG_1954.jpg" alt="Portrait session" loading="lazy">
+            <span class="gallery-card-caption">Quiet Moments <small>05</small></span>
+        </a>
+
+        <!-- FASHION -->
+        <a href="images/fashion%20shoot/IMG_1923.jpeg" class="gallery-card" data-category="fashion">
+            <img src="images/fashion%20shoot/IMG_1923.jpeg" alt="Fashion photography" loading="lazy">
+            <span class="gallery-card-caption">Fashion Story <small>06</small></span>
+        </a>
+
+        <a href="images/fashion%20shoot/IMG_1926.jpg" class="gallery-card" data-category="fashion">
+            <img src="images/fashion%20shoot/IMG_1926.jpg" alt="Fashion editorial" loading="lazy">
+            <span class="gallery-card-caption">Modern Elegance <small>07</small></span>
+        </a>
+
+        <a href="images/fashion%20shoot/IMG_1928.jpg" class="gallery-card" data-category="fashion">
+            <img src="images/fashion%20shoot/IMG_1928.jpg" alt="Fashion portrait session" loading="lazy">
+            <span class="gallery-card-caption">The Look <small>08</small></span>
+        </a>
+
+        <a href="images/fashion%20shoot/IMG_1930.jpg" class="gallery-card" data-category="fashion">
+            <img src="images/fashion%20shoot/IMG_1930.jpg" alt="Fashion photography session" loading="lazy">
+            <span class="gallery-card-caption">Style & Light <small>09</small></span>
+        </a>
+
+        <a href="images/fashion%20shoot/IMG_1935.jpg" class="gallery-card" data-category="fashion">
+            <img src="images/fashion%20shoot/IMG_1935.jpg" alt="Fashion photoshoot" loading="lazy">
+            <span class="gallery-card-caption">In Motion <small>10</small></span>
+        </a>
+
+        <a href="images/fashion%20shoot/IMG_1936.jpg" class="gallery-card" data-category="fashion">
+            <img src="images/fashion%20shoot/IMG_1936.jpg" alt="Editorial fashion portrait" loading="lazy">
+            <span class="gallery-card-caption">Editorial Mood <small>11</small></span>
+        </a>
+
+        <!-- EDITORIAL -->
+        <a href="images/editorial/IMG_1924.jpeg" class="gallery-card" data-category="editorial">
+            <img src="images/editorial/IMG_1924.jpeg" alt="Editorial photography" loading="lazy">
+            <span class="gallery-card-caption">Artful Frames <small>12</small></span>
+        </a>
+
+        <a href="images/editorial/IMG_1937.jpg" class="gallery-card" data-category="editorial">
+            <img src="images/editorial/IMG_1937.jpg" alt="Creative editorial portrait" loading="lazy">
+            <span class="gallery-card-caption">A Different Perspective <small>13</small></span>
+        </a>
+
+        <a href="images/editorial/IMG_1942.jpeg" class="gallery-card" data-category="editorial">
+            <img src="images/editorial/IMG_1942.jpeg" alt="Fine art photography" loading="lazy">
+            <span class="gallery-card-caption">Fine Art <small>14</small></span>
+        </a>
+
+        <a href="images/editorial/IMG_1950.jpg" class="gallery-card" data-category="editorial">
+            <img src="images/editorial/IMG_1950.jpg" alt="Editorial photo story" loading="lazy">
+            <span class="gallery-card-caption">Visual Poetry <small>15</small></span>
+        </a>
+
+        <a href="images/editorial/IMG_1951.jpg" class="gallery-card" data-category="editorial">
+            <img src="images/editorial/IMG_1951.jpg" alt="Artistic photography" loading="lazy">
+            <span class="gallery-card-caption">Beyond the Frame <small>16</small></span>
+        </a>
+
+        <a href="images/editorial/IMG_6544.jpg" class="gallery-card" data-category="editorial">
+            <img src="images/editorial/IMG_6544.jpg" alt="Editorial session" loading="lazy">
+            <span class="gallery-card-caption">The Details of Light <small>17</small></span>
+        </a>
+
+        <!-- FAMILY -->
+        <a href="images/Family/IMG_1931.jpg" class="gallery-card" data-category="family">
+            <img src="images/Family/IMG_1931.jpg" alt="Family photography" loading="lazy">
+            <span class="gallery-card-caption">Together <small>18</small></span>
+        </a>
+
+        <a href="images/Family/IMG_1932.jpg" class="gallery-card" data-category="family">
+            <img src="images/Family/IMG_1932.jpg" alt="Family moments" loading="lazy">
+            <span class="gallery-card-caption">Little Moments <small>19</small></span>
+        </a>
+
+        <a href="images/Family/IMG_1933.jpg" class="gallery-card" data-category="family">
+            <img src="images/Family/IMG_1933.jpg" alt="Family portrait session" loading="lazy">
+            <span class="gallery-card-caption">Family Stories <small>20</small></span>
+        </a>
+
+        <a href="images/Family/IMG_1934.jpg" class="gallery-card" data-category="family">
+            <img src="images/Family/IMG_1934.jpg" alt="Family portrait" loading="lazy">
+            <span class="gallery-card-caption">A Lifetime of Love <small>21</small></span>
+        </a>
+
+        <a href="images/Family/IMG_6579.jpg" class="gallery-card" data-category="family">
+            <img src="images/Family/IMG_6579.jpg" alt="Family photography session" loading="lazy">
+            <span class="gallery-card-caption">Our Forever <small>22</small></span>
+        </a>
+
+        <a href="images/Family/IMG_9445.jpg" class="gallery-card" data-category="family">
+            <img src="images/Family/IMG_9445.jpg" alt="Family memories" loading="lazy">
+            <span class="gallery-card-caption">The Beautiful Us <small>23</small></span>
+        </a>
+
+        <!-- DETAILS -->
+        <a href="images/details/IMG_1925.png" class="gallery-card" data-category="details">
+            <img src="images/details/IMG_1925.png" alt="Photography details" loading="lazy">
+            <span class="gallery-card-caption">Little Details <small>24</small></span>
+        </a>
+
+        <a href="images/details/IMG_1927.jpg" class="gallery-card" data-category="details">
+            <img src="images/details/IMG_1927.jpg" alt="Creative details" loading="lazy">
+            <span class="gallery-card-caption">The Finishing Touch <small>25</small></span>
+        </a>
+
+        <a href="images/details/IMG_2001.JPG" class="gallery-card" data-category="details">
+            <img src="images/details/IMG_2001.JPG" alt="Artistic detail" loading="lazy">
+            <span class="gallery-card-caption">A Closer Look <small>26</small></span>
+        </a>
+
+    </div>
+
+    <div class="gallery-footer">
+        <span>26 FRAMES · ENDLESS STORIES</span>
+        <a href="#booking">BOOK YOUR SESSION ↗</a>
+    </div>
+
+</section>
+
 
         <!-- SLIDESHOW -->
         <section class="slideshow-section">
