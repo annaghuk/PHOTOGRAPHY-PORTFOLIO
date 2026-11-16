@@ -2758,59 +2758,60 @@ h2 em {
     }
 }
 
+
 /* =====================================
    SANDALJYAN STUDIO — SIGNATURE LOGO
 ===================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Cormorant+Garamond:wght@400;500&display=swap');
 
 .site-header .logo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
     text-decoration: none;
     line-height: 1;
 }
 
 .site-header .brand-signature {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    white-space: nowrap;
     font-family: 'Italianno', cursive;
-    font-size: 48px;
+    font-size: 49px;
     font-weight: 400;
-    letter-spacing: 0;
-    line-height: 0.85;
+    line-height: 1;
     color: #fff;
 }
 
 .site-header .brand-studio {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 11px;
+    font-size: 19px;
     font-weight: 500;
-    letter-spacing: 7px;
-    margin-top: 7px;
-    margin-left: 4px;
+    letter-spacing: 3px;
     color: #fff;
 }
 
 .site-header .brand-subtitle {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 8px;
-    letter-spacing: 2px;
-    margin-top: 7px;
-    margin-left: 4px;
-    color: rgba(255,255,255,0.7);
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-top: 5px;
+    color: rgba(255,255,255,0.75);
 }
 
 @media (max-width: 600px) {
     .site-header .brand-signature {
         font-size: 40px;
+        gap: 7px;
     }
 
     .site-header .brand-studio {
-        font-size: 10px;
+        font-size: 16px;
+        letter-spacing: 2px;
     }
 
     .site-header .brand-subtitle {
-        font-size: 7px;
+        font-size: 8px;
+        letter-spacing: 2px;
     }
 }
