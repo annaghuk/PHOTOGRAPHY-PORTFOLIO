@@ -2121,3 +2121,145 @@ p {
 .slider-controls button {
     border-color: #777777 !important;
 }
+
+/* =========================================
+   BLACK & WHITE EDITORIAL REDESIGN
+   ========================================= */
+
+:root {
+    --ivory: #f5f5f3;
+    --cream: #e8e8e6;
+    --champagne: #c9c9c6;
+    --gold: #777777;
+    --espresso: #111111;
+    --soft-brown: #555555;
+    --white: #ffffff;
+    --border: #d5d5d2;
+
+    --transition: all .45s ease;
+}
+
+body {
+    background: #f5f5f3;
+    color: #111111;
+}
+
+h1 em,
+h2 em {
+    color: #777777;
+}
+
+.eyebrow,
+.text-link,
+.slide-counter {
+    color: #666666;
+}
+
+.site-header {
+    background: rgba(245,245,243,.97);
+    border-bottom: 1px solid #d8d8d5;
+}
+
+.main-navigation a:hover {
+    color: #888888;
+}
+
+.main-navigation .nav-booking {
+    border-color: #111111;
+}
+
+.main-navigation .nav-booking:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
+.intro-section,
+.slideshow-section,
+.behind-scenes-section,
+.testimonials-section,
+.booking-section {
+    background: #e9e9e7;
+}
+
+.image-placeholder {
+    background: linear-gradient(145deg, #e3e3e1, #c9c9c7);
+    color: #555555;
+}
+
+.primary-button {
+    background: #111111;
+    color: #ffffff;
+    border-color: #111111;
+}
+
+.primary-button:hover {
+    background: #555555;
+    border-color: #555555;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    background: #f8f8f6;
+    color: #111111;
+    border-color: #cccccc;
+}
+
+.site-footer {
+    background: #111111;
+    color: #ffffff;
+}
+
+.site-footer p,
+.site-footer > span {
+    color: #c7c7c7;
+}
+
+/* Hero image — black & white */
+.hero-image {
+    filter: grayscale(100%);
+    transition: filter .8s ease, transform .8s ease;
+}
+
+.hero-visual:hover .hero-image {
+    filter: grayscale(0%);
+    transform: scale(1.025);
+}
+
+/* Instagram photographs */
+.instagram-photo img {
+    filter: grayscale(100%);
+    transition: all .7s ease;
+}
+
+.instagram-photo:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Elegant monochrome details */
+.experience-card {
+    border-color: #d0d0ce;
+}
+
+.experience-card:hover {
+    background: #ffffff;
+    border-color: #999999;
+}
+
+.social-links a {
+    border-color: #bdbdbd;
+    color: #333333;
+}
+
+.social-links a:hover {
+    background: #111111;
+    color: #ffffff;
+}
+
+@media (max-width: 750px) {
+    .main-navigation {
+        background: #f5f5f3;
+        border-color: #d5d5d2;
+    }
+}
