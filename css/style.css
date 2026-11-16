@@ -3081,3 +3081,9 @@ h2 em {
         font-size: 25px !important;
     }
 }
+
+/* HERO TAGLINE — LOWER POSITION */
+
+.hero-content {
+    top: 58% !important;
+}
