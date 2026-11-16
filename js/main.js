@@ -209,3 +209,141 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+/* =====================================
+   GALLERY LIGHTBOX — FULL SCREEN VIEWER
+===================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const galleryCards = Array.from(
+        document.querySelectorAll(".gallery-card")
+    );
+
+    if (!galleryCards.length) return;
+
+    // CREATE LIGHTBOX
+    const lightbox = document.createElement("div");
+    lightbox.className = "gallery-lightbox";
+    lightbox.setAttribute("aria-hidden", "true");
+
+    lightbox.innerHTML = `
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+
+        <button class="lightbox-arrow lightbox-prev" aria-label="Previous photo">
+            &#8592;
+        </button>
+
+        <div class="lightbox-content">
+            <img class="lightbox-image" src="" alt="">
+            <div class="lightbox-counter"></div>
+        </div>
+
+        <button class="lightbox-arrow lightbox-next" aria-label="Next photo">
+            &#8594;
+        </button>
+    `;
+
+    document.body.appendChild(lightbox);
+
+    const image = lightbox.querySelector(".lightbox-image");
+    const counter = lightbox.querySelector(".lightbox-counter");
+    const closeButton = lightbox.querySelector(".lightbox-close");
+    const prevButton = lightbox.querySelector(".lightbox-prev");
+    const nextButton = lightbox.querySelector(".lightbox-next");
+
+    let currentIndex = 0;
+    let visiblePhotos = [];
+    let previousOverflow = "";
+
+    function getVisiblePhotos() {
+        return galleryCards.filter(card => {
+            return card.style.display !== "none";
+        });
+    }
+
+    function showPhoto(index) {
+        visiblePhotos = getVisiblePhotos();
+
+        if (!visiblePhotos.length) return;
+
+        currentIndex = (index + visiblePhotos.length) % visiblePhotos.length;
+
+        const card = visiblePhotos[currentIndex];
+        const thumbnail = card.querySelector("img");
+
+        image.src = card.getAttribute("href");
+        image.alt = thumbnail ? thumbnail.alt : "Photography";
+
+        counter.textContent =
+            `${String(currentIndex + 1).padStart(2, "0")} / ${String(visiblePhotos.length).padStart(2, "0")}`;
+    }
+
+    function openLightbox(card) {
+        visiblePhotos = getVisiblePhotos();
+        currentIndex = visiblePhotos.indexOf(card);
+
+        if (currentIndex < 0) return;
+
+        previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+
+        lightbox.classList.add("active");
+        lightbox.setAttribute("aria-hidden", "false");
+
+        showPhoto(currentIndex);
+        closeButton.focus();
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove("active");
+        lightbox.setAttribute("aria-hidden", "true");
+
+        document.body.style.overflow = previousOverflow;
+        image.src = "";
+    }
+
+    // OPEN PHOTO
+    galleryCards.forEach(card => {
+        card.addEventListener("click", event => {
+            event.preventDefault();
+            openLightbox(card);
+        });
+    });
+
+    // NEXT / PREVIOUS
+    nextButton.addEventListener("click", () => {
+        showPhoto(currentIndex + 1);
+    });
+
+    prevButton.addEventListener("click", () => {
+        showPhoto(currentIndex - 1);
+    });
+
+    // CLOSE
+    closeButton.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", event => {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    // KEYBOARD CONTROLS
+    document.addEventListener("keydown", event => {
+        if (!lightbox.classList.contains("active")) return;
+
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
+
+        if (event.key === "ArrowRight") {
+            showPhoto(currentIndex + 1);
+        }
+
+        if (event.key === "ArrowLeft") {
+            showPhoto(currentIndex - 1);
+        }
+    });
+
+});
