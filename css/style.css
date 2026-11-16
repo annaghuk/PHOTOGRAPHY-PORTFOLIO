@@ -1753,3 +1753,371 @@ h1, h2, h3 {
         margin: 0;
     }
 }
+
+/* ==========================================
+   SANDALJYAN — COMPLETE SOFT BLACK & LIGHT
+   GLOBAL COLOR REDESIGN
+========================================== */
+
+:root {
+    --ivory: #F7F7F5;
+    --cream: #E8E8E6;
+    --champagne: #D8D8D5;
+    --gold: #777777;
+    --espresso: #111111;
+    --soft-brown: #666666;
+    --white: #FFFFFF;
+    --border: #DADAD8;
+
+    --transition: all .4s ease;
+}
+
+/* GLOBAL */
+html,
+body {
+    background: #F7F7F5 !important;
+    color: #111111 !important;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4 {
+    color: #111111;
+}
+
+h1 em,
+h2 em {
+    color: #666666 !important;
+}
+
+p {
+    color: #555555;
+}
+
+.eyebrow {
+    color: #666666 !important;
+}
+
+/* HEADER */
+.site-header {
+    background: rgba(247,247,245,.97) !important;
+    color: #111111 !important;
+    border-bottom: 1px solid #DDDDDA !important;
+}
+
+.site-header a,
+.main-navigation a {
+    color: #111111;
+}
+
+.main-navigation a:hover {
+    color: #777777;
+}
+
+.site-header .nav-booking {
+    border-color: #111111 !important;
+}
+
+.site-header .nav-booking:hover {
+    background: #111111 !important;
+    color: #FFFFFF !important;
+}
+
+.menu-toggle {
+    color: #111111 !important;
+}
+
+/* BRAND */
+.brand-signature {
+    color: #111111 !important;
+}
+
+.brand-subtitle {
+    color: #777777 !important;
+}
+
+/* HERO */
+.hero {
+    background: #F7F7F5 !important;
+}
+
+.hero-visual {
+    background: #111111;
+}
+
+.hero-shade {
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,.58) 0%,
+        rgba(0,0,0,.22) 48%,
+        rgba(0,0,0,0) 100%
+    ) !important;
+}
+
+.hero-content,
+.hero-content h1,
+.hero-content p,
+.hero-content h1 em,
+.hero-cta,
+.hero-eyebrow,
+.hero-side-note,
+.hero-scroll {
+    color: #FFFFFF !important;
+}
+
+/* LIGHT SECTIONS */
+.intro-section,
+.about-section,
+.testimonials-section,
+.faq-section,
+.instagram-section {
+    background: #F7F7F5 !important;
+    color: #111111 !important;
+}
+
+/* SOFT GREY SECTIONS */
+.portfolio-section,
+.slideshow-section,
+.booking-section {
+    background: #E8E8E6 !important;
+    color: #111111 !important;
+}
+
+/* DARK EDITORIAL SECTIONS */
+.experience-section,
+.contact-section {
+    background: #111111 !important;
+    color: #FFFFFF !important;
+}
+
+.experience-section h2,
+.experience-section h3,
+.experience-section p,
+.contact-section h2,
+.contact-section p,
+.contact-section a,
+.experience-section .eyebrow,
+.contact-section .eyebrow {
+    color: #FFFFFF !important;
+}
+
+.experience-card {
+    background: transparent;
+    border-color: #444444 !important;
+}
+
+.experience-card:hover {
+    background: #202020 !important;
+    border-color: #777777 !important;
+}
+
+.experience-card i {
+    color: #DDDDDD !important;
+}
+
+.experience-card p {
+    color: #CCCCCC !important;
+}
+
+/* BEHIND THE SCENES */
+.behind-scenes-section {
+    background: #E8E8E6 !important;
+    color: #111111 !important;
+}
+
+.behind-scenes-content h2,
+.behind-scenes-content .eyebrow {
+    color: #111111 !important;
+}
+
+.behind-scenes-content p,
+.film-caption {
+    color: #555555 !important;
+}
+
+.behind-scenes-video {
+    background: #111111 !important;
+    border-color: #333333 !important;
+}
+
+/* ABOUT */
+.about-content h2,
+.about-content .eyebrow {
+    color: #111111 !important;
+}
+
+.about-content p {
+    color: #555555 !important;
+}
+
+.text-link {
+    color: #111111 !important;
+    border-color: #111111 !important;
+}
+
+/* TESTIMONIALS */
+.testimonials-section h2,
+.testimonials-section .eyebrow,
+.testimonial p {
+    color: #111111 !important;
+}
+
+.testimonial i,
+.testimonial span {
+    color: #666666 !important;
+}
+
+/* FAQ */
+.faq-list details {
+    border-color: #D5D5D2 !important;
+}
+
+.faq-list summary {
+    color: #111111 !important;
+}
+
+.faq-list summary::after {
+    color: #555555 !important;
+}
+
+.faq-list details p {
+    color: #555555 !important;
+}
+
+/* BOOKING */
+.booking-section h2,
+.booking-section .eyebrow {
+    color: #111111 !important;
+}
+
+.booking-section > p {
+    color: #555555 !important;
+}
+
+.booking-form label {
+    color: #222222 !important;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+    border: 1px solid #D5D5D2 !important;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    border-color: #111111 !important;
+}
+
+/* BUTTONS */
+.primary-button,
+.instagram-follow {
+    background: #111111 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #111111 !important;
+}
+
+.primary-button:hover,
+.instagram-follow:hover {
+    background: #555555 !important;
+    color: #FFFFFF !important;
+    border-color: #555555 !important;
+}
+
+/* INSTAGRAM */
+.instagram-section {
+    background: #F7F7F5 !important;
+}
+
+.instagram-heading h2,
+.instagram-heading .eyebrow {
+    color: #111111 !important;
+}
+
+.instagram-handle {
+    color: #555555 !important;
+}
+
+.instagram-photo {
+    background: #E8E8E6 !important;
+}
+
+.instagram-follow {
+    border-color: #111111 !important;
+}
+
+/* IMAGE PLACEHOLDERS */
+.image-placeholder {
+    background: #E8E8E6 !important;
+    color: #555555 !important;
+}
+
+.image-placeholder::before {
+    border-color: rgba(255,255,255,.55) !important;
+}
+
+/* SOCIAL ICONS */
+.social-links a {
+    border-color: #777777 !important;
+    color: #FFFFFF !important;
+}
+
+.social-links a:hover {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+}
+
+/* FOOTER */
+.site-footer {
+    background: #111111 !important;
+    color: #FFFFFF !important;
+}
+
+.site-footer .brand-signature,
+.site-footer p,
+.site-footer > span,
+.site-footer .back-to-top {
+    color: #FFFFFF !important;
+}
+
+.site-footer .brand-subtitle {
+    color: #CCCCCC !important;
+}
+
+/* PRELOADER */
+.preloader {
+    background: #F7F7F5 !important;
+    color: #111111 !important;
+}
+
+/* SELECTION */
+::selection {
+    background: #111111 !important;
+    color: #FFFFFF !important;
+}
+
+/* MOBILE MENU */
+@media (max-width: 750px) {
+    .main-navigation {
+        background: #F7F7F5 !important;
+        border-color: #DDDDDA !important;
+    }
+}
+
+/* REMOVE OLD GOLD / CHAMPAGNE ACCENTS */
+.portfolio-item > span,
+.slider-controls button,
+.slide-counter,
+.instagram-handle,
+.text-link {
+    color: #555555;
+}
+
+.slider-controls button {
+    border-color: #777777 !important;
+}
