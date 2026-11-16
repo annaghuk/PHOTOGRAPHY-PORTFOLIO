@@ -2848,3 +2848,89 @@ h2 em {
         animation: none !important;
     }
 }
+
+/* =========================================
+   SANDALJYAN STUDIO — LUXURY HERO LAYOUT
+========================================= */
+
+.hero-visual {
+    position: relative !important;
+}
+
+/* Text positioned on the right */
+
+.hero-content {
+    position: absolute !important;
+    top: 50% !important;
+    right: 8% !important;
+    left: auto !important;
+    transform: translateY(-50%) !important;
+
+    width: min(42%, 560px) !important;
+    max-width: 560px !important;
+
+    text-align: right !important;
+    align-items: flex-end !important;
+
+    z-index: 5 !important;
+}
+
+/* Elegant, refined headline */
+
+.hero-content h1 {
+    font-size: clamp(38px, 4.2vw, 64px) !important;
+    line-height: 1.12 !important;
+    font-weight: 400 !important;
+    letter-spacing: -1px !important;
+    margin-bottom: 22px !important;
+}
+
+/* Larger signature tagline */
+
+.hero-content .hero-tagline {
+    font-size: clamp(21px, 2vw, 29px) !important;
+    line-height: 1.4 !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.3px !important;
+    margin-bottom: 14px !important;
+}
+
+/* Supporting text */
+
+.hero-content .hero-description {
+    font-size: 13px !important;
+    letter-spacing: 1.5px !important;
+    line-height: 1.8 !important;
+}
+
+/* Eyebrow */
+
+.hero-content .hero-eyebrow {
+    font-size: 9px !important;
+    letter-spacing: 3px !important;
+    margin-bottom: 24px !important;
+}
+
+/* CTA */
+
+.hero-content .hero-cta {
+    margin-top: 28px !important;
+}
+
+/* Mobile layout */
+
+@media (max-width: 768px) {
+    .hero-content {
+        right: 6% !important;
+        left: auto !important;
+        width: 52% !important;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(27px, 6vw, 40px) !important;
+    }
+
+    .hero-content .hero-tagline {
+        font-size: 19px !important;
+    }
+}
