@@ -3022,3 +3022,62 @@ h2 em {
         letter-spacing: 1.5px !important;
     }
 }
+
+/* =========================================
+   SANDALJYAN — MINIMAL LUXURY HERO
+========================================= */
+
+.hero-content {
+    position: absolute !important;
+    top: 50% !important;
+    right: 8% !important;
+    left: auto !important;
+    transform: translateY(-50%) !important;
+
+    width: 42% !important;
+    max-width: 560px !important;
+
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
+
+    text-align: right !important;
+    z-index: 5 !important;
+}
+
+.hero-content .hero-tagline {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: clamp(30px, 3.2vw, 47px) !important;
+    font-weight: 400 !important;
+    font-style: italic !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0.2px !important;
+
+    color: #ffffff !important;
+    margin: 0 !important;
+    max-width: 460px !important;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    .hero-content {
+        right: 5% !important;
+        width: 48% !important;
+    }
+
+    .hero-content .hero-tagline {
+        font-size: clamp(24px, 5.5vw, 34px) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        right: 4% !important;
+        width: 50% !important;
+    }
+
+    .hero-content .hero-tagline {
+        font-size: 25px !important;
+    }
+}
