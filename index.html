@@ -577,102 +577,195 @@
 
         </section>
 
-        <!-- FAQ -->
-        <section class="faq-section">
+       
+<!-- FAQ -->
+<section class="faq-section" id="faq">
 
+    <div class="faq-editorial">
+
+        <div class="faq-intro">
             <span class="eyebrow">A FEW THINGS TO KNOW</span>
-            <h2>Frequently asked <em>questions.</em></h2>
 
-            <div class="faq-list">
+            <h2>
+                Before we<br>
+                <em>begin.</em>
+            </h2>
 
-                <details>
-                    <summary>How do I book a photography session?</summary>
-                    <p>
-                        Choose your preferred session and complete
-                        the booking form. We will contact you
-                        to discuss availability.
-                    </p>
-                </details>
+            <p>
+                Everything you need to know
+                before stepping in front of the camera.
+            </p>
 
-                <details>
-                    <summary>Where do photography sessions take place?</summary>
-                    <p>
-                        Sessions can be arranged in Yerevan,
-                        at selected locations or in a suitable studio.
-                    </p>
-                </details>
-
-                <details>
-                    <summary>Can I request a specific photography style?</summary>
-                    <p>
-                        Absolutely. We can discuss your preferred
-                        aesthetic and creative direction before
-                        your session.
-                    </p>
-                </details>
-
-                <details>
-                    <summary>Can I book a family session?</summary>
-                    <p>
-                        Yes. Family sessions are available
-                        and can be tailored to your needs.
-                    </p>
-                </details>
-
+            <div class="faq-mark">
+                <span>01</span>
+                <span class="faq-mark-line"></span>
+                <span>04</span>
             </div>
-        </section>
+        </div>
 
-        <!-- BOOKING -->
-        <section class="booking-section" id="booking">
+        <div class="faq-list">
+
+            <details>
+                <summary>
+                    <span>How do I book a photography session?</span>
+                    <span class="faq-icon">+</span>
+                </summary>
+                <p>
+                    Choose your preferred session and complete
+                    the booking form. We will contact you
+                    to discuss availability.
+                </p>
+            </details>
+
+            <details>
+                <summary>
+                    <span>Where do photography sessions take place?</span>
+                    <span class="faq-icon">+</span>
+                </summary>
+                <p>
+                    Sessions can be arranged in Yerevan,
+                    at selected locations or in a suitable studio.
+                </p>
+            </details>
+
+            <details>
+                <summary>
+                    <span>Can I request a specific photography style?</span>
+                    <span class="faq-icon">+</span>
+                </summary>
+                <p>
+                    Absolutely. We can discuss your preferred
+                    aesthetic and creative direction before
+                    your session.
+                </p>
+            </details>
+
+            <details>
+                <summary>
+                    <span>Can I book a family session?</span>
+                    <span class="faq-icon">+</span>
+                </summary>
+                <p>
+                    Yes. Family sessions are available
+                    and can be tailored to your needs.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BOOKING -->
+<section class="booking-section" id="booking">
+
+    <div class="booking-editorial">
+
+        <div class="booking-intro">
 
             <span class="eyebrow">YOUR STORY STARTS HERE</span>
 
-            <h2>Let's create something <em>beautiful.</em></h2>
+            <h2>
+                Let's create<br>
+                something<br>
+                <em>beautiful.</em>
+            </h2>
 
             <p>
-                Tell us a little about your vision
-                and let's plan your photography experience.
+                Every photograph begins with an idea.
+                Tell us yours, and let's turn it into
+                something unforgettable.
             </p>
+
+            <div class="booking-image">
+                <img
+                    src="./images/portraits/IMG_1946.jpeg"
+                    alt="Photography portrait by Sandaljyan Studio"
+                    loading="lazy"
+                >
+            </div>
+
+            <span class="booking-note">
+                SANDALJYAN STUDIO · YEREVAN
+            </span>
+
+        </div>
+
+
+        <div class="booking-form-wrap">
+
+            <div class="booking-form-heading">
+                <span class="eyebrow">LET'S PLAN YOUR SESSION</span>
+                <h3>Booking request</h3>
+            </div>
 
             <form class="booking-form" id="bookingForm">
 
-                <label for="session">Choose your session</label>
+                <div class="booking-field booking-field-full">
+                    <label for="session">Choose your session</label>
+                    <select id="session" required>
+                        <option value="">Select a session</option>
+                        <option value="Individual">Individual</option>
+                        <option value="Portrait">Portrait</option>
+                        <option value="Family">Family</option>
+                    </select>
+                </div>
 
-                <select id="session" required>
-                    <option value="">Select a session</option>
-                    <option value="Individual">Individual</option>
-                    <option value="Portrait">Portrait</option>
-                    <option value="Family">Family</option>
-                </select>
+                <div class="booking-field">
+                    <label for="clientName">Your name</label>
+                    <input
+                        type="text"
+                        id="clientName"
+                        placeholder="Full name"
+                        required
+                    >
+                </div>
 
-                <label for="clientName">Your name</label>
-                <input type="text" id="clientName"
-                       placeholder="Full name" required>
+                <div class="booking-field">
+                    <label for="clientPhone">Phone number</label>
+                    <input
+                        type="tel"
+                        id="clientPhone"
+                        placeholder="Your phone number"
+                        required
+                    >
+                </div>
 
-                <label for="clientPhone">Phone number</label>
-                <input type="tel" id="clientPhone"
-                       placeholder="Your phone number" required>
+                <div class="booking-field booking-field-full">
+                    <label for="preferredDate">Preferred date</label>
+                    <input type="date" id="preferredDate" required>
+                </div>
 
-                <label for="preferredDate">Preferred date</label>
-                <input type="date" id="preferredDate" required>
+                <div class="booking-field booking-field-full">
+                    <label for="clientMessage">Tell us about your idea</label>
+                    <textarea
+                        id="clientMessage"
+                        placeholder="Your vision, preferences and details..."
+                        rows="3"
+                    ></textarea>
+                </div>
 
-                <label for="clientMessage">Tell us about your idea</label>
-                <textarea id="clientMessage"
-                          placeholder="Your vision, preferences and details..."
-                          rows="5"></textarea>
+                <div class="booking-submit booking-field-full">
+                    <button type="submit" class="primary-button">
+                        Send Booking Request ↗
+                    </button>
 
-                <button type="submit" class="primary-button">
-                    Send Booking Request ↗
-                </button>
-
-                <small>
-                    Your booking is not confirmed until availability
-                    has been discussed and agreed upon.
-                </small>
+                    <small>
+                        Your booking is not confirmed until availability
+                        has been discussed and agreed upon.
+                    </small>
+                </div>
 
             </form>
 
-        </section>
+        </div>
+
+    </div>
+
+</section>
+
 
 
 <!-- INSTAGRAM GALLERY -->
