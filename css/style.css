@@ -4405,3 +4405,50 @@ body {
         font-size: 26px;
     }
 }
+
+/* COMPACT BOOKING FORM */
+
+.booking-form-wrap {
+    max-width: 370px;
+    width: 100%;
+    justify-self: start;
+}
+
+.booking-form-heading {
+    margin-bottom: 22px;
+}
+
+.booking-form-heading h3 {
+    font-size: 25px;
+}
+
+.booking-form {
+    gap: 16px 12px;
+}
+
+.booking-field input,
+.booking-field select,
+.booking-field textarea {
+    padding: 10px 12px;
+    font-size: 12px;
+}
+
+.booking-field textarea {
+    min-height: 75px;
+}
+
+.booking-submit .primary-button {
+    min-height: 46px;
+    font-size: 12px;
+}
+
+.booking-submit small {
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .booking-form-wrap {
+        max-width: 100%;
+    }
+}
