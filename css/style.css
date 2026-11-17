@@ -3522,3 +3522,126 @@ h2 em {
 .slideshow-section .slide img {
     filter: grayscale(100%);
 }
+
+/* =========================================
+   LANGUAGE SWITCHER — LUXURY EDITORIAL
+========================================= */
+
+.site-header {
+    position: relative;
+}
+
+.language-switcher {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+    z-index: 1000;
+}
+
+.language-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 10px 13px;
+    border: 1px solid rgba(165, 142, 114, 0.45);
+    border-radius: 2px;
+    background: transparent;
+    color: #665747;
+    font-family: inherit;
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-trigger:hover {
+    border-color: #A58E72;
+    background: rgba(165, 142, 114, 0.07);
+}
+
+.language-trigger > i:first-child {
+    font-size: 13px;
+    color: #A58E72;
+}
+
+.language-chevron {
+    font-size: 8px;
+    transition: transform 0.3s ease;
+}
+
+.language-switcher.open .language-chevron {
+    transform: rotate(180deg);
+}
+
+.language-menu {
+    position: absolute;
+    top: calc(100% + 13px);
+    right: 0;
+    min-width: 165px;
+    padding: 8px;
+    background: #FBF9F5;
+    border: 1px solid rgba(165, 142, 114, 0.3);
+    box-shadow: 0 14px 35px rgba(64, 55, 47, 0.12);
+    z-index: 1001;
+}
+
+.language-menu[hidden] {
+    display: none !important;
+}
+
+.language-menu button {
+    display: block;
+    width: 100%;
+    padding: 12px 13px;
+    border: none;
+    background: transparent;
+    color: #51463C;
+    text-align: left;
+    font-family: inherit;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.language-menu button:hover {
+    background: #F0EBE3;
+    color: #A58E72;
+    padding-left: 18px;
+}
+
+/* TABLET & MOBILE */
+
+@media (max-width: 900px) {
+    .language-switcher {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .language-trigger {
+        padding: 9px 11px;
+    }
+
+    .language-menu {
+        right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-switcher {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .language-trigger {
+        gap: 7px;
+        padding: 8px 9px;
+        font-size: 9px;
+    }
+
+    .language-menu {
+        min-width: 150px;
+    }
+}
