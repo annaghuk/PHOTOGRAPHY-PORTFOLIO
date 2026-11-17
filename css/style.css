@@ -3674,3 +3674,28 @@ html[lang="ru"] .hero-content h1 {
         line-height: 1.2;
     }
 }
+
+/* HERO IMAGE CAPTION — Armenian and Russian */
+
+html[lang="hy"] .hero-caption,
+html[lang="ru"] .hero-caption {
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    max-width: none;
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+    html[lang="hy"] .hero-caption,
+    html[lang="ru"] .hero-caption {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+        bottom: 20px;
+    }
+}
