@@ -3784,3 +3784,303 @@ html[lang="ru"] .hero-content .hero-tagline {
         margin: 25px auto;
     }
 }
+
+/* ==========================================
+   SANDALJYAN STUDIO
+   FINAL BLACK & WHITE EDITORIAL THEME
+   Slideshow styling intentionally preserved
+========================================== */
+
+/* GLOBAL COLORS */
+
+:root {
+    --ivory: #FFFFFF;
+    --cream: #F1F1F1;
+    --champagne: #D8D8D8;
+    --gold: #777777;
+    --espresso: #111111;
+    --soft-brown: #555555;
+    --white: #FFFFFF;
+    --border: #D8D8D8;
+}
+
+body {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+}
+
+/* HEADER */
+
+.site-header {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+    border-bottom: 1px solid #E5E5E5 !important;
+}
+
+.site-header a,
+.main-navigation a,
+.site-header .brand-signature,
+.site-header .brand-studio {
+    color: #111111 !important;
+}
+
+.site-header .brand-subtitle {
+    color: #777777 !important;
+}
+
+.main-navigation a:hover {
+    color: #777777 !important;
+}
+
+.main-navigation .nav-booking {
+    border-color: #111111 !important;
+}
+
+.main-navigation .nav-booking:hover {
+    background: #111111 !important;
+    color: #FFFFFF !important;
+}
+
+.menu-toggle {
+    color: #111111 !important;
+}
+
+/* HERO — KEEP THE PHOTOGRAPH IN NATURAL COLOR */
+
+.hero {
+    background: #FFFFFF !important;
+}
+
+.hero-image {
+    filter: none !important;
+}
+
+.hero-content,
+.hero-content h1,
+.hero-content p,
+.hero-content .hero-tagline,
+.hero-content .hero-description,
+.hero-content .hero-eyebrow,
+.hero-content .hero-cta {
+    color: #FFFFFF !important;
+}
+
+/* BLACK SECTIONS */
+
+.intro-section,
+.experience-section,
+.about-section,
+.faq-section,
+.instagram-section,
+.site-footer {
+    background: #111111 !important;
+    color: #FFFFFF !important;
+}
+
+.intro-section h2,
+.intro-section h2 em,
+.intro-section p,
+.intro-section .eyebrow,
+.experience-section h2,
+.experience-section h3,
+.experience-section p,
+.experience-section .eyebrow,
+.about-section h2,
+.about-section h2 em,
+.about-section p,
+.about-section .eyebrow,
+.faq-section h2,
+.faq-section .eyebrow,
+.instagram-section h2,
+.instagram-section h2 em,
+.instagram-section .eyebrow,
+.instagram-section a,
+.site-footer p,
+.site-footer span {
+    color: #FFFFFF !important;
+}
+
+/* BLACK SECTION DETAILS */
+
+.experience-card {
+    background: transparent !important;
+    border: 1px solid #444444 !important;
+}
+
+.experience-card:hover {
+    background: #202020 !important;
+    border-color: #888888 !important;
+}
+
+.experience-card h3,
+.experience-card p,
+.experience-card i {
+    color: #FFFFFF !important;
+}
+
+.faq-list details {
+    border-color: #444444 !important;
+}
+
+.faq-list summary,
+.faq-list summary::after,
+.faq-list details p {
+    color: #FFFFFF !important;
+}
+
+.about-content .text-link {
+    color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+}
+
+/* WHITE SECTIONS */
+
+.portfolio-section,
+.behind-scenes-section,
+.testimonials-section,
+.booking-section,
+.contact-section {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+}
+
+.portfolio-section h2,
+.portfolio-section h3,
+.portfolio-section p,
+.portfolio-section .eyebrow,
+.behind-scenes-section h2,
+.behind-scenes-section p,
+.behind-scenes-section .eyebrow,
+.behind-scenes-section .film-caption,
+.testimonials-section h2,
+.testimonials-section p,
+.testimonials-section span,
+.testimonials-section .eyebrow,
+.booking-section h2,
+.booking-section p,
+.booking-section .eyebrow,
+.booking-form label,
+.contact-section h2,
+.contact-section p,
+.contact-section .eyebrow,
+.contact-section a {
+    color: #111111 !important;
+}
+
+/* WHITE SECTION CARDS */
+
+.portfolio-item,
+.testimonial,
+.experience-card {
+    border-color: #D8D8D8;
+}
+
+.gallery-card img,
+.instagram-photo img,
+.about-image .about-portrait {
+    filter: none !important;
+}
+
+/* BOOKING FORM */
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+    border: 1px solid #CCCCCC !important;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    border-color: #111111 !important;
+}
+
+/* BUTTONS */
+
+.primary-button {
+    background: #111111 !important;
+    color: #FFFFFF !important;
+    border-color: #111111 !important;
+}
+
+.primary-button:hover {
+    background: #555555 !important;
+    border-color: #555555 !important;
+}
+
+/* CONTACT ICONS */
+
+.contact-section .social-links a {
+    color: #111111 !important;
+    border-color: #111111 !important;
+}
+
+.contact-section .social-links a:hover {
+    background: #111111 !important;
+    color: #FFFFFF !important;
+}
+
+/* INSTAGRAM GALLERY */
+
+.instagram-section .instagram-photo img {
+    filter: none !important;
+}
+
+.instagram-section .instagram-photo span {
+    color: #FFFFFF !important;
+}
+
+.instagram-section .instagram-follow {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+    border: 1px solid #FFFFFF !important;
+}
+
+.instagram-section .instagram-follow:hover {
+    background: #111111 !important;
+    color: #FFFFFF !important;
+}
+
+/* FOOTER */
+
+.site-footer {
+    background: #111111 !important;
+    color: #FFFFFF !important;
+}
+
+.site-footer .brand-signature,
+.site-footer .brand-studio,
+.site-footer .brand-subtitle,
+.site-footer p,
+.site-footer > span,
+.site-footer .back-to-top {
+    color: #FFFFFF !important;
+}
+
+/* MOBILE MENU */
+
+@media (max-width: 750px) {
+    .main-navigation {
+        background: #FFFFFF !important;
+        border-color: #DDDDDD !important;
+    }
+
+    .main-navigation a {
+        color: #111111 !important;
+    }
+}
+
+/* SLIDESHOW — KEEP ITS DESIGN, RESTORE PHOTO COLORS */
+
+.slideshow-section .slide img {
+    filter: none !important;
+}
+
+/* ACCESSIBILITY */
+
+::selection {
+    background: #111111 !important;
+    color: #FFFFFF !important;
+}
