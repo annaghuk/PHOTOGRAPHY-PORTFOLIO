@@ -31,16 +31,18 @@
         <span>Creating memories...</span>
     </div>
   
+
 <!-- HEADER -->
-
 <header class="site-header">
-    
-<a href="#home" class="logo">
-    <span class="brand-signature">Sandaljyan <span class="brand-studio">STUDIO</span></span>
-    <span class="brand-subtitle">PHOTOGRAPHY & ART</span>
-</a>
 
-    <button class="menu-toggle" aria-label="Open menu">
+    <a href="#home" class="logo">
+        <span class="brand-signature">
+            Sandaljyan <span class="brand-studio">STUDIO</span>
+        </span>
+        <span class="brand-subtitle">PHOTOGRAPHY & ART</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
         <i class="fa-solid fa-bars"></i>
     </button>
 
@@ -55,7 +57,31 @@
            rel="noopener noreferrer">Instagram ↗</a>
         <a href="#booking" class="nav-booking">Book a Session ↗</a>
     </nav>
+
+    <!-- LANGUAGE SELECTOR -->
+    <div class="language-switcher" id="languageSwitcher">
+
+        <button class="language-trigger"
+                id="languageTrigger"
+                type="button"
+                aria-haspopup="true"
+                aria-expanded="false">
+            <i class="fa-solid fa-globe"></i>
+            <span id="currentLanguage">EN</span>
+            <i class="fa-solid fa-chevron-down language-chevron"></i>
+        </button>
+
+        <div class="language-menu" id="languageMenu" hidden>
+            <button type="button" data-language="en">🇬🇧 English</button>
+            <button type="button" data-language="hy">🇦🇲 Հայերեն</button>
+            <button type="button" data-language="ru">🇷🇺 Русский</button>
+            <button type="button" data-language="fr">🇫🇷 Français</button>
+        </div>
+
+    </div>
+
 </header>
+
 
 <main>
 
