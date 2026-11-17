@@ -4514,3 +4514,217 @@ body {
     font-size: 8px;
     line-height: 1.5;
 }
+
+/* COMPACT FAQ & BOOKING SECTIONS */
+
+/* FAQ */
+.faq-section {
+    padding: 55px 7% !important;
+}
+
+.faq-editorial {
+    max-width: 1100px;
+    gap: 55px;
+}
+
+.faq-intro h2 {
+    font-size: clamp(38px, 4vw, 52px);
+    margin-bottom: 14px;
+}
+
+.faq-intro p {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.faq-mark {
+    margin-top: 25px;
+}
+
+.faq-list details {
+    padding: 16px 0;
+}
+
+.faq-list summary {
+    font-size: 13px;
+}
+
+.faq-list details p {
+    font-size: 11px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+
+/* BOOKING */
+.booking-section {
+    padding: 55px 7% !important;
+}
+
+.booking-editorial {
+    max-width: 1100px;
+    gap: 55px;
+}
+
+.booking-intro h2 {
+    font-size: clamp(38px, 4vw, 52px);
+    margin-bottom: 14px;
+}
+
+.booking-intro p {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.booking-form-wrap {
+    max-width: 320px;
+}
+
+.booking-form-heading {
+    margin-bottom: 12px;
+}
+
+.booking-form-heading h3 {
+    font-size: 19px;
+}
+
+.booking-form {
+    gap: 10px;
+}
+
+.booking-field label {
+    font-size: 9px;
+}
+
+.booking-field input,
+.booking-field select {
+    height: 34px;
+    padding: 6px 9px;
+    font-size: 10px;
+}
+
+.booking-field textarea {
+    min-height: 48px;
+    padding: 7px 9px;
+    font-size: 10px;
+}
+
+.booking-submit .primary-button {
+    min-height: 36px;
+    font-size: 10px;
+}
+
+.booking-submit small {
+    font-size: 8px;
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .faq-section,
+    .booking-section {
+        padding: 45px 6% !important;
+    }
+
+    .faq-editorial,
+    .booking-editorial {
+        gap: 28px;
+    }
+
+    .faq-intro h2,
+    .booking-intro h2 {
+        font-size: 40px;
+    }
+
+    .booking-form-wrap {
+        max-width: 100%;
+    }
+}
+
+/* DESKTOP — MORE COMPACT FAQ & BOOKING */
+
+@media (min-width: 769px) {
+
+    .faq-section,
+    .booking-section {
+        padding-top: 38px !important;
+        padding-bottom: 38px !important;
+    }
+
+    .faq-editorial,
+    .booking-editorial {
+        max-width: 1000px;
+        gap: 45px;
+    }
+
+    .faq-intro h2,
+    .booking-intro h2 {
+        font-size: 43px;
+        line-height: 1;
+    }
+
+    .faq-intro p,
+    .booking-intro p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .faq-list details {
+        padding: 12px 0;
+    }
+
+    .faq-list summary {
+        font-size: 12px;
+    }
+
+    .faq-list details p {
+        font-size: 10px;
+        margin-top: 8px;
+    }
+
+    .faq-mark {
+        margin-top: 20px;
+    }
+
+    .booking-form-wrap {
+        max-width: 300px;
+    }
+
+    .booking-form-heading {
+        margin-bottom: 10px;
+    }
+
+    .booking-form-heading h3 {
+        font-size: 18px;
+    }
+
+    .booking-form {
+        gap: 8px 10px;
+    }
+
+    .booking-field {
+        gap: 4px;
+    }
+
+    .booking-field label {
+        font-size: 9px;
+    }
+
+    .booking-field input,
+    .booking-field select {
+        height: 32px;
+        padding: 5px 8px;
+        font-size: 10px;
+    }
+
+    .booking-field textarea {
+        min-height: 42px;
+        padding: 6px 8px;
+        font-size: 10px;
+    }
+
+    .booking-submit .primary-button {
+        min-height: 34px;
+    }
+}
