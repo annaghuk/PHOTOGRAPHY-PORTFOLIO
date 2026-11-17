@@ -377,3 +377,45 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+/* =====================================
+   BOOKING FORM — WHATSAPP INTEGRATION
+===================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const bookingForm = document.querySelector("#bookingForm");
+
+    if (!bookingForm) return;
+
+    bookingForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const session = document.querySelector("#session")?.value || "";
+        const name = document.querySelector("#clientName")?.value.trim() || "";
+        const phone = document.querySelector("#clientPhone")?.value.trim() || "";
+        const date = document.querySelector("#preferredDate")?.value || "";
+        const message = document.querySelector("#clientMessage")?.value.trim() || "";
+
+        const whatsappNumber = "37491990020";
+
+        const whatsappMessage = `
+NEW BOOKING REQUEST — SANDALJYAN STUDIO
+
+Session: ${session}
+Client name: ${name}
+Phone number: ${phone}
+Preferred date: ${date}
+
+Message:
+${message}
+
+Please contact the client to confirm availability.
+        `.trim();
+
+        const whatsappURL =
+            `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+        window.open(whatsappURL, "_blank");
+    });
+
+});
