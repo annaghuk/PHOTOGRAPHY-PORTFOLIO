@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Cormorant+Garamond:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@400;500&display=swap');
 /* =====================================================
    PHOTOGRAPHY PORTFOLIO
    Luxury Editorial Design
@@ -3697,5 +3698,50 @@ html[lang="ru"] .hero-caption {
         font-size: 10px;
         letter-spacing: 0.5px;
         bottom: 20px;
+    }
+}
+
+/* FIX — HERO TAGLINE FOR ARMENIAN & RUSSIAN */
+
+/* Armenian */
+html[lang="hy"] .hero-content .hero-tagline {
+    font-family: 'Noto Serif Armenian', serif !important;
+    font-size: clamp(25px, 3.2vw, 39px) !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0 !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    width: 100% !important;
+    max-width: 520px !important;
+}
+
+/* Russian */
+html[lang="ru"] .hero-content .hero-tagline {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: clamp(29px, 3.5vw, 43px) !important;
+    line-height: 1.3 !important;
+    letter-spacing: 0 !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    width: 100% !important;
+    max-width: 520px !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    html[lang="hy"] .hero-content,
+    html[lang="ru"] .hero-content {
+        width: 88% !important;
+        right: 6% !important;
+    }
+
+    html[lang="hy"] .hero-content .hero-tagline {
+        font-size: 27px !important;
+        line-height: 1.5 !important;
+    }
+
+    html[lang="ru"] .hero-content .hero-tagline {
+        font-size: 30px !important;
+        line-height: 1.3 !important;
     }
 }
