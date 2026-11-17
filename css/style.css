@@ -3645,3 +3645,32 @@ h2 em {
         min-width: 150px;
     }
 }
+
+/* HERO TITLE — Armenian & Russian adjustments */
+
+/* Armenian */
+html[lang="hy"] .hero-content h1 {
+    font-size: clamp(38px, 4.2vw, 58px);
+    line-height: 1.18;
+    letter-spacing: -0.5px;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+/* Russian */
+html[lang="ru"] .hero-content h1 {
+    font-size: clamp(38px, 4.2vw, 58px);
+    line-height: 1.18;
+    letter-spacing: -0.5px;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    html[lang="hy"] .hero-content h1,
+    html[lang="ru"] .hero-content h1 {
+        font-size: clamp(34px, 8vw, 46px);
+        line-height: 1.2;
+    }
+}
