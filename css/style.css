@@ -4452,3 +4452,65 @@ body {
         max-width: 100%;
     }
 }
+
+/* REFINED & SHORT BOOKING FORM */
+
+.booking-form-wrap {
+    max-width: 370px;
+}
+
+.booking-form-heading {
+    margin-bottom: 16px;
+}
+
+.booking-form-heading h3 {
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.booking-form-heading .eyebrow {
+    font-size: 9px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.booking-form {
+    gap: 12px 10px;
+}
+
+.booking-field {
+    gap: 6px;
+}
+
+.booking-field label {
+    font-size: 10px;
+    letter-spacing: 0.3px;
+}
+
+.booking-field input,
+.booking-field select {
+    height: 38px;
+    padding: 8px 10px;
+    font-size: 11px;
+}
+
+.booking-field textarea {
+    min-height: 58px;
+    padding: 9px 10px;
+    font-size: 11px;
+}
+
+.booking-submit {
+    gap: 10px;
+}
+
+.booking-submit .primary-button {
+    min-height: 40px;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.booking-submit small {
+    font-size: 8px;
+    line-height: 1.5;
+}
