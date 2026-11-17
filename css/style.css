@@ -4084,3 +4084,20 @@ body {
     background: #111111 !important;
     color: #FFFFFF !important;
 }
+
+/* HERO IMAGE — BLACK & WHITE TO COLOR ON HOVER */
+
+.hero img,
+.hero-section img,
+.hero-image img,
+.hero-background img {
+    filter: grayscale(100%);
+    transition: filter 1s ease-in-out;
+}
+
+.hero img:hover,
+.hero-section img:hover,
+.hero-image img:hover,
+.hero-background img:hover {
+    filter: grayscale(0%);
+}
