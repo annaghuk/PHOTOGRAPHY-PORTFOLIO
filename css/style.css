@@ -4971,3 +4971,105 @@ body {
         margin-bottom: 18px;
     }
 }
+
+/* COMPACT FAQ + CONTACT LAYOUT */
+
+.faq-contact-section {
+    padding: 38px 5% !important;
+}
+
+.faq-contact-grid {
+    max-width: 1050px !important;
+    margin: 0 auto !important;
+    display: grid !important;
+    grid-template-columns: 1.2fr 0.8fr !important;
+    gap: 38px !important;
+    align-items: center !important;
+}
+
+/* FAQ - QUESTIONS ONLY */
+
+.faq-column {
+    min-width: 0;
+}
+
+.faq-column > .eyebrow,
+.faq-column > h2 {
+    display: none !important;
+}
+
+.faq-column .faq-list {
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+.faq-column .faq-list details {
+    padding: 12px 0 !important;
+    margin: 0 !important;
+}
+
+.faq-column .faq-list summary {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    gap: 10px !important;
+}
+
+.faq-column .faq-list details p {
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+    margin: 8px 0 0 !important;
+}
+
+/* CONTACT - SMALL AND ELEGANT */
+
+.contact-column {
+    min-width: 0;
+    padding: 25px 28px !important;
+    border: 1px solid rgba(128,128,128,0.35) !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-column h2 {
+    font-size: 25px !important;
+    line-height: 1.2 !important;
+    margin: 8px 0 10px !important;
+}
+
+.contact-column p {
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
+.contact-column .social-links {
+    margin-top: 17px !important;
+    gap: 17px !important;
+}
+
+.contact-column .social-links a {
+    font-size: 18px !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+    .faq-contact-section {
+        padding: 28px 6% !important;
+    }
+
+    .faq-contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 22px !important;
+    }
+
+    .contact-column {
+        padding: 20px !important;
+    }
+
+    .contact-column h2 {
+        font-size: 23px !important;
+    }
+}
