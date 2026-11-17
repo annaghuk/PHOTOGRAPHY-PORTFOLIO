@@ -4085,19 +4085,14 @@ body {
     color: #FFFFFF !important;
 }
 
-/* HERO IMAGE — BLACK & WHITE TO COLOR ON HOVER */
 
-.hero img,
-.hero-section img,
-.hero-image img,
-.hero-background img {
-    filter: grayscale(100%);
-    transition: filter 1s ease-in-out;
+/* HERO PHOTO — GRAYSCALE TO COLOR ON HOVER */
+
+.hero-image-wrap img.hero-image {
+    filter: grayscale(100%) !important;
+    transition: filter 1.2s ease-in-out !important;
 }
 
-.hero img:hover,
-.hero-section img:hover,
-.hero-image img:hover,
-.hero-background img:hover {
-    filter: grayscale(0%);
+.hero-image-wrap:hover img.hero-image {
+    filter: grayscale(0%) !important;
 }
