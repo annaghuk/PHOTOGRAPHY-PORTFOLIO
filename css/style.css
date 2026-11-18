@@ -3266,16 +3266,17 @@ h2 em {
     }
 }
 
+
 /* =====================================================
    EDITORIAL SLIDESHOW — SANDALJYAN STUDIO
-   Ivory & Champagne Luxury Design
+   Black & White Editorial Design
    ===================================================== */
 
 .slideshow-section {
     position: relative;
     width: 100%;
     padding: 110px 6% 85px;
-    background: var(--ivory, #F8F7F4);
+    background: #000000;
     overflow: hidden;
 }
 
@@ -3288,7 +3289,7 @@ h2 em {
 .slideshow-heading .eyebrow {
     display: block;
     margin-bottom: 18px;
-    color: #A58E72;
+    color: #FFFFFF;
     font-size: 10px;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -3296,7 +3297,7 @@ h2 em {
 
 .slideshow-heading h2 {
     margin: 0 0 16px;
-    color: #40372F;
+    color: #FFFFFF;
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(38px, 5vw, 66px);
     font-weight: 400;
@@ -3304,13 +3305,13 @@ h2 em {
 }
 
 .slideshow-heading h2 em {
-    color: #A58E72;
+    color: #FFFFFF;
     font-weight: 400;
 }
 
 .slideshow-heading p {
     margin: 0;
-    color: #81766B;
+    color: #D0D0D0;
     font-size: 13px;
     letter-spacing: 0.5px;
     line-height: 1.8;
@@ -3326,7 +3327,7 @@ h2 em {
     min-height: 380px;
     margin: 0 auto;
     overflow: hidden;
-    background: #EAE4DA;
+    background: #000000;
 }
 
 /* INDIVIDUAL SLIDES */
