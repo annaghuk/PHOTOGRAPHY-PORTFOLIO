@@ -5596,3 +5596,42 @@ body {
         font-size: clamp(18px, 5vw, 23px) !important;
     }
 }
+
+/* =========================================
+   SLIDESHOW — FORCE BLACK & WHITE THEME
+========================================= */
+
+.slideshow-section {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+.slideshow-section .slideshow-heading,
+.slideshow-section .slideshow-heading h2,
+.slideshow-section .slideshow-heading h2 em,
+.slideshow-section .slideshow-heading .eyebrow,
+.slideshow-section .slideshow-heading p {
+    color: #FFFFFF !important;
+}
+
+.slideshow-section .slideshow {
+    background: #000000 !important;
+}
+
+.slideshow-section .slideshow-caption,
+.slideshow-section .slideshow-caption span,
+.slideshow-section .slide-counter {
+    color: #FFFFFF !important;
+}
+
+.slideshow-section .slider-controls button {
+    background: transparent !important;
+    border-color: #FFFFFF !important;
+    color: #FFFFFF !important;
+}
+
+.slideshow-section .slider-controls button:hover {
+    background: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+    color: #000000 !important;
+}
