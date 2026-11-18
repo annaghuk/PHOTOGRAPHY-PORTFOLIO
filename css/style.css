@@ -5771,3 +5771,16 @@ body {
     outline: 1px solid #fff;
     outline-offset: 5px;
 }
+/* FORCE MORE BUTTON TO THE RIGHT */
+
+.portfolio-section.gallery-section .gallery-more {
+    display: flex !important;
+    width: fit-content !important;
+
+    margin-left: auto !important;
+    margin-right: 0 !important;
+
+    float: none !important;
+    align-self: flex-end !important;
+    justify-self: end !important;
+}
