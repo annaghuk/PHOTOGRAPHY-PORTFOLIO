@@ -2302,13 +2302,14 @@ h2 em {
     }
 }
 
+
 /* =========================================
    SANDALJYAN — BLACK & WHITE EDITORIAL GALLERY
 ========================================= */
 
 .portfolio-section.gallery-section {
-    background: #f7f7f7;
-    color: #171717;
+    background: #000000;
+    color: #FFFFFF;
     padding: 110px 6%;
 }
 
@@ -2318,16 +2319,16 @@ h2 em {
 }
 
 .gallery-heading .eyebrow {
-    color: #777;
+    color: #BDBDBD;
     letter-spacing: 3px;
 }
 
 .gallery-heading h2 {
-    color: #171717;
+    color: #FFFFFF;
 }
 
 .gallery-heading p {
-    color: #777;
+    color: #C7C7C7;
 }
 
 /* FILTER BUTTONS */
@@ -2346,7 +2347,7 @@ h2 em {
     border: none;
     border-bottom: 1px solid transparent;
     padding: 8px 2px;
-    color: #777;
+    color: #AFAFAF;
     font-family: inherit;
     font-size: 12px;
     letter-spacing: 1.5px;
@@ -2357,9 +2358,11 @@ h2 em {
 
 .gallery-filter:hover,
 .gallery-filter.active {
-    color: #111;
-    border-bottom-color: #111;
+    color: #FFFFFF;
+    border-bottom-color: #FFFFFF;
 }
+
+
 
 /* EDITORIAL MOSAIC GRID */
 
@@ -2379,7 +2382,7 @@ h2 em {
     display: block;
     min-width: 0;
     overflow: hidden;
-    background: #dedede;
+    background: #000000;
     text-decoration: none;
     isolation: isolate;
 }
@@ -2494,7 +2497,7 @@ h2 em {
 /* KEYBOARD ACCESSIBILITY */
 
 .gallery-card:focus-visible {
-    outline: 2px solid #111;
+    outline: 2px solid #FFFFFF;
     outline-offset: 4px;
 }
 
@@ -2508,14 +2511,14 @@ h2 em {
     max-width: 1500px;
     margin: 42px auto 0;
     padding-top: 22px;
-    border-top: 1px solid #d7d7d7;
-    color: #777;
+    border-top: 1px solid #333333;
+    color: #BDBDBD;
     font-size: 11px;
     letter-spacing: 2px;
 }
 
 .gallery-footer a {
-    color: #171717;
+    color: #FFFFFF;
     text-decoration: none;
     transition: opacity .3s ease;
 }
