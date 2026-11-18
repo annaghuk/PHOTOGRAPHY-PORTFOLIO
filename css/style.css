@@ -5684,3 +5684,90 @@ body {
     outline: 1px solid #fff;
     outline-offset: 5px;
 }
+
+/* =====================================
+   GALLERY — FINAL BLACK DESIGN
+===================================== */
+
+.portfolio-section.gallery-section {
+    background: #080808 !important;
+    color: #fff !important;
+}
+
+.portfolio-section.gallery-section .gallery-heading h2 {
+    color: #fff !important;
+}
+
+.portfolio-section.gallery-section .gallery-heading .eyebrow,
+.portfolio-section.gallery-section .gallery-heading p {
+    color: #aaa !important;
+}
+
+.portfolio-section.gallery-section .gallery-filter {
+    color: #999 !important;
+}
+
+.portfolio-section.gallery-section .gallery-filter.active,
+.portfolio-section.gallery-section .gallery-filter:hover {
+    color: #fff !important;
+    border-bottom-color: #fff !important;
+}
+
+.portfolio-section.gallery-section .gallery-card {
+    background: #080808 !important;
+}
+
+.portfolio-section.gallery-section .gallery-footer {
+    border-top-color: #333 !important;
+    color: #aaa !important;
+}
+
+.portfolio-section.gallery-section .gallery-footer a {
+    color: #fff !important;
+}
+
+/* MORE BUTTON — RIGHT ALIGNMENT */
+
+.portfolio-section.gallery-section .gallery-more {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin: 45px 0 20px auto;
+    padding: 12px 0 12px 25px;
+
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid #777 !important;
+    border-radius: 0 !important;
+
+    color: #fff !important;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.portfolio-section.gallery-section .gallery-more:hover {
+    color: #bbb !important;
+    border-bottom-color: #fff !important;
+}
+
+.portfolio-section.gallery-section .gallery-more span {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-section.gallery-section .gallery-more:hover span {
+    transform: translateX(5px);
+}
+
+.portfolio-section.gallery-section .gallery-more:focus-visible {
+    outline: 1px solid #fff;
+    outline-offset: 5px;
+}
