@@ -201,42 +201,82 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
 /* =====================================
-   GALLERY FILTERS
+   GALLERY FILTERS + MORE BUTTON
 ===================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
     const filterButtons = document.querySelectorAll(".gallery-filter");
-    const galleryCards = document.querySelectorAll(".gallery-card");
+    const galleryCards = Array.from(
+        document.querySelectorAll(".gallery-card")
+    );
+    const moreButton = document.querySelector(".gallery-more");
 
     if (!filterButtons.length || !galleryCards.length) return;
+
+    const initialVisibleCount = 9;
+    let selectedFilter = "all";
+    let showAll = false;
+
+    function updateGallery() {
+
+        const matchingCards = galleryCards.filter(card => {
+            const category = card.dataset.category;
+
+            return selectedFilter === "all" ||
+                   category === selectedFilter;
+        });
+
+        galleryCards.forEach(card => {
+            const isMatching = matchingCards.includes(card);
+            const cardIndex = matchingCards.indexOf(card);
+
+            const shouldShow =
+                isMatching &&
+                (showAll || cardIndex < initialVisibleCount);
+
+            card.style.display = shouldShow ? "" : "none";
+        });
+
+        if (moreButton) {
+            const hasMore = matchingCards.length > initialVisibleCount;
+
+            moreButton.style.display =
+                hasMore && !showAll ? "inline-flex" : "none";
+
+            moreButton.setAttribute(
+                "aria-expanded",
+                String(showAll)
+            );
+        }
+    }
 
     filterButtons.forEach(button => {
 
         button.addEventListener("click", () => {
 
-            const selectedFilter = button.dataset.filter;
+            selectedFilter = button.dataset.filter;
+            showAll = false;
 
             filterButtons.forEach(item => {
                 item.classList.toggle("active", item === button);
             });
 
-            galleryCards.forEach(card => {
-
-                const category = card.dataset.category;
-
-                if (selectedFilter === "all" || category === selectedFilter) {
-                    card.style.display = "";
-                } else {
-                    card.style.display = "none";
-                }
-
-            });
-
+            updateGallery();
         });
 
     });
+
+    moreButton?.addEventListener("click", () => {
+
+        showAll = true;
+        updateGallery();
+
+    });
+
+    updateGallery();
 
 });
 
