@@ -3379,7 +3379,7 @@ h2 em {
     backdrop-filter: blur(8px);
 }
 
-/* SLIDER CONTROLS */
+/* SLIDER CONTROLS — BLACK & WHITE */
 
 .slideshow-section .slider-controls {
     display: flex;
@@ -3395,28 +3395,29 @@ h2 em {
     justify-content: center;
     width: 46px;
     height: 46px;
-    border: 1px solid #C9BBA9;
+    border: 1px solid #FFFFFF;
     border-radius: 50%;
     background: transparent;
-    color: #665747;
+    color: #FFFFFF;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .slideshow-section .slider-controls button:hover {
-    background: #A58E72;
-    border-color: #A58E72;
-    color: #FFFFFF;
+    background: #FFFFFF;
+    border-color: #FFFFFF;
+    color: #000000;
 }
 
 .slideshow-section .slide-counter {
     min-width: 65px;
-    color: #665747;
+    color: #FFFFFF;
     font-size: 11px;
     letter-spacing: 2px;
     text-align: center;
     font-variant-numeric: tabular-nums;
 }
+
 
 /* BOTTOM CAPTION */
 
@@ -5411,7 +5412,6 @@ body {
         grid-column: auto !important;
     }
 }
-
 
 /* =========================================================
    SANDALJYAN STUDIO — REFINED TYPOGRAPHY & EDITORIAL SPACING
