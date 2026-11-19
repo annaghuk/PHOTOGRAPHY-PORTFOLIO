@@ -5997,4 +5997,39 @@ body {
         min-height: 480px;
     }
 }
+/* ==========================================
+   BEHIND THE SCENES — BLACK & WHITE DESIGN
+========================================== */
 
+.behind-scenes-section {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+}
+
+.behind-scenes-section h1,
+.behind-scenes-section h2,
+.behind-scenes-section h3,
+.behind-scenes-section p,
+.behind-scenes-section .eyebrow,
+.behind-scenes-section span {
+    color: #FFFFFF !important;
+}
+
+/* Video gallery background */
+.behind-scenes-videos,
+.behind-scenes-video {
+    background: #000000 !important;
+}
+
+/* Text over videos */
+.behind-scenes-videos .video-overlay {
+    color: #FFFFFF !important;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .behind-scenes-section {
+        background: #000000 !important;
+        color: #FFFFFF !important;
+    }
+}
