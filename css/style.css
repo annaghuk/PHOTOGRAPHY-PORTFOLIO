@@ -5843,11 +5843,13 @@ body {
 }
 
 .site-header .logo,
-.site-header .brand-signature,
+.site-header .brand-signature {
+    color: #000000 !important;
+}
+
 .site-header .main-navigation a {
     color: #FFFFFF !important;
 }
-
 .site-header .brand-subtitle {
     color: #BDBDBD !important;
 }
