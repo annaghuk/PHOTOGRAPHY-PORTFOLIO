@@ -5828,3 +5828,173 @@ body {
     align-self: flex-end !important;
     justify-self: end !important;
 }
+/* ==========================================
+   SANDALJYAN STUDIO
+   BLACK HEADER + HERO + MOVING GALLERY
+   DESKTOP & MOBILE
+========================================== */
+
+/* HEADER */
+
+.site-header {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border-bottom: 1px solid #333333 !important;
+}
+
+.site-header .logo,
+.site-header .brand-signature,
+.site-header .main-navigation a {
+    color: #FFFFFF !important;
+}
+
+.site-header .brand-subtitle {
+    color: #BDBDBD !important;
+}
+
+.site-header .main-navigation a:hover {
+    color: #AAAAAA !important;
+}
+
+.site-header .main-navigation .nav-booking {
+    border: 1px solid #FFFFFF !important;
+    background: transparent !important;
+    color: #FFFFFF !important;
+}
+
+.site-header .main-navigation .nav-booking:hover {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    border-color: #FFFFFF !important;
+}
+
+.site-header .menu-toggle {
+    color: #FFFFFF !important;
+    background: transparent !important;
+}
+
+/* LANGUAGE SELECTOR */
+
+.site-header .language-trigger {
+    color: #FFFFFF !important;
+    background: transparent !important;
+    border-color: #777777 !important;
+}
+
+.site-header .language-menu {
+    background: #111111 !important;
+    border: 1px solid #444444 !important;
+}
+
+.site-header .language-menu button {
+    background: transparent !important;
+    color: #FFFFFF !important;
+}
+
+.site-header .language-menu button:hover {
+    background: #333333 !important;
+}
+
+/* HERO BACKGROUND */
+
+.hero {
+    background: #000000 !important;
+    padding: 18px !important;
+}
+
+.hero-visual {
+    background: #000000 !important;
+}
+
+/* HERO TEXT */
+
+.hero-content,
+.hero-tagline,
+.hero-description,
+.hero-eyebrow,
+.hero-side-note,
+.hero-scroll {
+    color: #FFFFFF !important;
+}
+
+/* HERO IMAGE HOVER — KEEP ORIGINAL EFFECT */
+
+.hero-image {
+    filter: grayscale(100%);
+    transition:
+        filter .8s ease,
+        transform .8s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .hero-visual:hover .hero-image {
+        filter: grayscale(0%);
+    }
+}
+
+/* MOVING PHOTOGRAPH GALLERY */
+
+.beyond-gallery {
+    background: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.beyond-track,
+.beyond-images {
+    background: #000000 !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    .site-header {
+        background: #000000 !important;
+    }
+
+    .main-navigation,
+    .main-navigation.active {
+        background: #000000 !important;
+        border-bottom: 1px solid #444444 !important;
+    }
+
+    .main-navigation a {
+        color: #FFFFFF !important;
+    }
+
+    .hero {
+        background: #000000 !important;
+        padding: 8px !important;
+    }
+
+    .hero-visual {
+        width: 100%;
+        min-height: 540px;
+        background: #000000 !important;
+    }
+
+    .beyond-gallery {
+        width: 100%;
+        background: #000000 !important;
+        height: 350px;
+    }
+
+    .beyond-images img {
+        width: 280px;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 400px) {
+
+    .hero {
+        padding: 6px !important;
+    }
+
+    .hero-visual {
+        min-height: 480px;
+    }
+}
+
