@@ -201,9 +201,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 /* =====================================
-   GALLERY FILTERS + MORE BUTTON
+   GALLERY FILTERS + MORE / SHOW LESS
 ===================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -217,6 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!filterButtons.length || !galleryCards.length) return;
 
     const initialVisibleCount = 9;
+
     let selectedFilter = "all";
     let showAll = false;
 
@@ -230,21 +230,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         galleryCards.forEach(card => {
-            const isMatching = matchingCards.includes(card);
+
             const cardIndex = matchingCards.indexOf(card);
 
             const shouldShow =
-                isMatching &&
+                cardIndex !== -1 &&
                 (showAll || cardIndex < initialVisibleCount);
 
             card.style.display = shouldShow ? "" : "none";
         });
 
         if (moreButton) {
+
             const hasMore = matchingCards.length > initialVisibleCount;
 
             moreButton.style.display =
-                hasMore && !showAll ? "inline-flex" : "none";
+                hasMore ? "inline-flex" : "none";
+
+            moreButton.innerHTML = showAll
+                ? 'SHOW LESS <span>↑</span>'
+                : 'MORE <span>→</span>';
 
             moreButton.setAttribute(
                 "aria-expanded",
@@ -253,6 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // CATEGORY FILTERS
     filterButtons.forEach(button => {
 
         button.addEventListener("click", () => {
@@ -269,9 +275,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+    // MORE / SHOW LESS TOGGLE
     moreButton?.addEventListener("click", () => {
 
-        showAll = true;
+        showAll = !showAll;
+
         updateGallery();
 
     });
@@ -279,6 +287,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateGallery();
 
 });
+
 
 /* =====================================
    GALLERY LIGHTBOX — FULL SCREEN VIEWER
