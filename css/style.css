@@ -6035,3 +6035,8 @@ body {
         color: #FFFFFF !important;
     }
 }
+/* HEADER LOGO — WHITE TEXT */
+.site-header .logo,
+.site-header .brand-signature {
+    color: #FFFFFF !important;
+}
