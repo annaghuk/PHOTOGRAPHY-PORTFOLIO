@@ -6040,3 +6040,8 @@ body {
 .site-header .brand-signature {
     color: #FFFFFF !important;
 }
+/* HEADER — SANDALJYAN STUDIO LOGO */
+.site-header .logo .brand-signature,
+.site-header .logo .brand-signature .brand-studio {
+    color: #FFFFFF !important;
+}
