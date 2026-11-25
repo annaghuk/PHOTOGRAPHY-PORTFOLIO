@@ -6045,3 +6045,7 @@ body {
 .site-header .logo .brand-signature .brand-studio {
     color: #FFFFFF !important;
 }
+.site-header .logo .brand-subtitle {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+}
